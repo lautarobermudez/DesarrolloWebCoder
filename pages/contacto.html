@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Metadatos SEO para mejorar el posicionamiento en buscadores -->
+    <meta name="description" content="Contacta con [Nombre], psicóloga clínica en Buenos Aires. Agenda tu cita, solicita información o encuentra la ubicación de la consulta.">
+    <meta name="keywords" content="contacto psicólogo, cita psicología, psicólogo Buenos Aires, terapia psicológica">
+    <meta name="author" content="[Nombre]">
+    
+    <title>Psicología Clínica con [Nombre] - Contacto</title>
+    
+    <!-- Añadir favicon (mismo que en las otras páginas) -->
+    <link rel="icon" type="image/png" href="../multimedia/faviconPC.png">
+    <link rel="shortcut icon" href="../multimedia/faviconPC.png">
+    
+</head>
+
+<body>
+     <!-- ===================== HEADER ===================== -->
+    <header>
+        <div>
+            <!-- Logo como enlace a la página principal -->
+            <div>
+                <a href="../index.html">
+                    <img src="../multimedia/LogoPCP.png" alt="Psicología Clínica">
+                </a>
+            </div>
+            
+            <!-- Mejora de accesibilidad en la navegación -->
+            <nav role="navigation" aria-label="Menú principal">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="sobre-mi.html">Sobre Mí</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html" aria-current="page">Contacto</a></li> <!-- Página activa -->
+                </ul>
+                <button aria-expanded="false" aria-controls="menu">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <main>
+        <!-- Banner de página con título principal -->
+        <section>
+            <div>
+                <h1>Contacto</h1> <!-- Título principal -->
+            </div>
+        </section>
+        
+        <section>
+            <div>
+                <!-- Texto introductorio -->
+                <div>
+                    <p>Estoy aquí para ayudarte. Puedes contactarme para agendar una cita, solicitar información sobre mis servicios o resolver cualquier duda que tengas. Te responderé a la mayor brevedad posible.</p>
+                </div>
+
+                <!-- Contenedor flexible: Formulario + Mapa -->
+                <div>
+                    <div> <!-- Formulario de contacto -->
+                        <!-- Mejora de formulario con atributos ARIA -->
+                        <form id="contactForm" action="procesar-formulario.php" method="POST" aria-label="Formulario de contacto">
+                            <!-- Mensaje de éxito/error (se mostrarán con CSS cuando implementes JS) -->
+                            <div>¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.</div>
+                            <div>Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.</div>
+
+                            <fieldset>
+                                <legend>Información de contacto</legend> <!-- LEGEND: Describe el grupo de campos (accesibilidad) -->
+
+                                <!-- Grupo de formulario: Nombre -->
+                                <div>
+                                    <label for="name">Nombre <span>*</span></label>
+                                    <input type="text" id="name" name="name" required aria-required="true">
+                                </div>
+                                
+                                <!-- Grupo de formulario: Email -->
+                                <div>
+                                    <label for="email">Email <span>*</span></label>
+                                    <input type="email" id="email" name="email" required aria-required="true">
+                                </div>
+                                
+                                <!-- Grupo de formulario: Teléfono -->
+                                <div>
+                                    <label for="phone">Teléfono</label>
+                                    <input type="tel" id="phone" name="phone" aria-describedby="phone-help">
+                                    <small id="phone-help">Opcional. Solo se utilizará si es necesario contactarte con urgencia.</small>
+                                </div>
+                                
+                                <!-- Grupo de formulario: Asunto -->
+                                <div>
+                                    <label for="subject">Asunto <span>*</span></label>
+                                    <select id="subject" name="subject" required aria-required="true">
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="informacion">Solicitar información</option>
+                                        <option value="cita">Agendar una cita</option>
+                                        <option value="talleres">Información sobre talleres</option>
+                                        <option value="otro">Otro asunto</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Elemento de formulario adicional para preferencia horaria -->
+                                <div id="schedule-group">
+                                    <label for="schedule">Preferencia horaria</label>
+                                    <select id="schedule" name="schedule">
+                                        <option value="">Selecciona tu preferencia</option>
+                                        <option value="manana">Mañanas (9:00 - 14:00)</option>
+                                        <option value="tarde">Tardes (16:00 - 20:00)</option>
+                                        <option value="cualquiera">Cualquier horario</option>
+                                    </select>
+                                    <small>Indícanos tu preferencia horaria para la cita</small>
+                                </div>
+                                
+                                <!-- Grupo de formulario: Mensaje -->
+                                <div>
+                                    <label for="message">Mensaje <span>*</span></label>
+                                    <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                                </div>
+                                
+                                <!-- Política de privacidad -->
+                                <div>
+                                    <div>
+                                        <input type="checkbox" id="privacy" name="privacy" required aria-required="true">
+                                        <label for="privacy">He leído y acepto la <a href="#">política de privacidad</a> <span>*</span></label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            
+                            <!-- Ayuda de campos requeridos -->
+                            <div>
+                                <p><span>*</span> Campos obligatorios</p>
+                            </div>
+                            
+                            <!-- Botón de envío -->
+                            <button type="submit">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Sección de mapa y contacto -->
+                    <div>
+                        <h2>Ubicación</h2>
+                        <address>Calle Principal 123, Madrid</address>
+                        
+                        <!-- Atributos mejorados para el iframe del mapa -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12166.05410656416!2d-3.7037902!3d40.4167754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid%2C%20Espa%C3%B1a!5e0!3m2!1ses!2ses!4v1712276658214!5m2!1ses!2ses" 
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Ubicación de la consulta en Google Maps">
+                        </iframe>
+                        
+                        <!-- Información de contacto adicional -->
+                        <div>
+                            <h2>Información de Contacto</h2>
+                            <!-- Enlaces mejorados para email y teléfono -->
+                            <p><strong>Email:</strong> <a href="mailto:contacto@psicologia.com">contacto@psicologia.com</a></p>
+                            <p><strong>Teléfono:</strong> <a href="tel:+34123456789">+34 123 456 789</a></p>
+                            <p><strong>Horario:</strong> Lunes a Viernes de 9:00 a 20:00</p>
+                        </div>
+
+                
+                <!-- FAQ específicas de contacto -->
+                <section>
+                    <h2>Preguntas frecuentes</h2>
+                    
+                    <div>
+                        <div>
+                            <h3>¿Cuánto tiempo tardarás en responder a mi mensaje?</h3>
+                            <div>
+                                <p>Normalmente respondo a todos los mensajes en un plazo máximo de 24-48 horas laborables. Si el asunto es urgente, te recomiendo contactar directamente por teléfono.</p>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3>¿Puedo solicitar una primera cita informativa?</h3>
+                            <div>
+                                <p>Sí, ofrezco una primera sesión informativa de 15-20 minutos sin compromiso. En esta sesión podremos conocernos, resolver tus dudas y valorar si mi enfoque terapéutico se adapta a tus necesidades.</p>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3>¿Trabajas con compañías de seguros?</h3>
+                            <div>
+                                <p>Actualmente trabajo con varias compañías de seguros médicos. Si tienes un seguro, indícalo en el mensaje y te informaré si existe convenio con tu aseguradora.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <div>
+            <div>
+                <div>
+                    <h3>Psicología Clínica</h3>
+                    <p>Un espacio seguro para tu bienestar emocional.</p>
+                </div>
+                
+                <div>
+                    <h3>Contacto</h3>
+                    <p><a href="mailto:contacto@psicologia.com">contacto@psicologia.com</a></p>
+                    <p>Teléfono: <a href="tel:+34123456789">+34 123 456 789</a></p>
+                    <address>Dirección: Calle Principal 123, Madrid</address>
+                </div>
+                
+                <div>
+                    <h3>Sígueme</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.youtube.com" target="_blank" rel="noopener" title="YouTube">
+                                <img src="../multimedia/youtube-icon.png" alt="YouTube">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn">
+                                <img src="../multimedia/linkedin-icon.png" alt="LinkedIn">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener" title="Instagram">
+                                <img src="../multimedia/instagram-icon.png" alt="Instagram">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div>
+                <p>© 2024 [Nombre] - Psicóloga Clínica. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript que se implementará en el futuro -->
+    <script src="../js/script.js"></script>
+    <!-- Aquí irá el JavaScript específico para el formulario cuando llegues a esa parte del curso -->
+</body>
+</html>

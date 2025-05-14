@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Define el idioma para SEO y accesibilidad -->
+<head> 
+    <meta charset="UTF-8"> <!-- Permite caracteres especiales (ñ, tildes, etc.) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- "viewport": Hace que la página se adapte al ancho del dispositivo. ¡Clave para diseño móvil! -->
+    
+    <!-- Metadatos SEO para mejorar el posicionamiento en buscadores -->
+    <meta name="description" content="Psicología clínica especializada en terapia individual para adultos con [Nombre]. Consultas en Buenos Aires y online.">
+    <meta name="keywords" content="psicología, terapia, salud mental, psicóloga Buenos Aires">
+    <meta name="author" content="[Nombre]">
+    
+    <title>Psicología Clínica con [Nombre] - Inicio</title> <!-- Título en la pestaña del navegador -->
+    
+    <!-- Añadir favicon (ícono que aparece en la pestaña del navegador) -->
+    <link rel="icon" type="image/png" href="multimedia/faviconPC.png">
+    <link rel="shortcut icon" href="multimedia/faviconPC.png">
+    
+</head>
+
+<body>
+    <header> 
+        <div> <!-- "container": Clase para centrar contenido y dar márgenes (se usará en CSS) -->
+            <div>
+                <!-- Logo como enlace a la página principal (práctica estándar) -->
+                <a href="index.html">
+                    <img src="multimedia/LogoPCP.png" alt="Psicología Clínica">
+                </a>
+            </div>
+            
+            <!-- Menú de navegación principal con atributos de accesibilidad -->
+            <nav role="navigation" aria-label="Menú principal">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Inicio</a></li> <!-- aria-current indica la página actual -->
+                    <li><a href="pages/sobre-mi.html">Sobre Mí</a></li>
+                    <li><a href="pages/servicios.html">Servicios</a></li>
+                    <li><a href="pages/blog.html">Blog</a></li>
+                    <li><a href="pages/contacto.html">Contacto</a></li>
+                </ul>
+                <!-- Botón para menú móvil: Se activará con JavaScript/CSS -->
+                <button aria-expanded="false" aria-controls="menu">☰</button>  
+            </nav>
+        </div>
+    </header>
+
+    <main> <!-- Contenedor principal del contenido -->
+        <!-- Sección Hero: Portada principal -->
+        <section aria-label="Presentación principal">
+            <!-- Añadida la imagen de fondo para el hero -->
+            <div>
+                <img src="multimedia/heroImage.jpg" alt="Personas agarrandose de las manos">
+            </div>
+            <div>
+                <!-- h1: Título principal. Solo debe haber uno por página (importante para SEO) -->
+                <h1>Psicología Clínica con [Nombre]</h1> 
+                <p>Especialista en terapia individual para adultos. Un espacio seguro para tu bienestar emocional.</p>
+                <!-- Botones de llamada a la acción (CTA) -->
+                <div> 
+                    <a href="pages/servicios.html">Ver servicios</a>
+                    <a href="pages/contacto.html">Contactar</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de servicios destacados en la página principal -->
+        <section>
+            <div>
+                <h2>Servicios destacados</h2>
+                <div>
+                    <!-- Servicio 1 -->
+                    <article>
+                        <img src="multimedia/terapia_individual.jpg" alt="Terapia individual">
+                        <h3>Terapia individual</h3>
+                        <p>Espacio personalizado para abordar dificultades emocionales y favorecer tu bienestar.</p>
+                        <a href="pages/servicios.html#terapia-individual">Saber más</a>
+                    </article>
+                    
+                    <!-- Servicio 2 -->
+                    <article>
+                        <img src="multimedia/tratamiento_ansiedad.jpg" alt="Tratamiento de ansiedad">
+                        <h3>Tratamiento de ansiedad</h3>
+                        <p>Estrategias efectivas para manejar y reducir los síntomas de ansiedad.</p>
+                        <a href="pages/servicios.html#ansiedad">Saber más</a>
+                    </article>
+                    
+                    <!-- Servicio 3 -->
+                    <article>
+                        <img src="multimedia/terapia_online.jpg" alt="Terapia online">
+                        <h3>Terapia online</h3>
+                        <p>Sesiones a distancia con la misma calidad y atención personalizada.</p>
+                        <a href="pages/servicios.html#online">Saber más</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de testimonios o frase destacada -->
+        <section>
+            <div>
+                <blockquote>
+                    <p>"El primer paso para cambiar es tomar conciencia. El segundo paso es aceptación."</p>
+                    <cite>— [Nombre]</cite>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div> <!-- Contenido del footer dividido en columnas -->
+            <div>
+                <div> <!-- Columna 1: Descripción -->
+                    <h3>Psicología Clínica</h3>
+                    <p>Un espacio seguro para tu bienestar emocional.</p>
+                </div>
+                
+                <div> <!-- Columna 2: Datos de contacto -->
+                    <h3>Contacto</h3>
+                    <!-- Enlaces de contacto más descriptivos -->
+                    <p><a href="mailto:contacto@psicologia.com">contacto@psicologia.com</a></p>
+                    <p>Teléfono: <a href="tel:+34123456789">+34 123 456 789</a></p>
+                    <address>Dirección: Calle Principal 123, Madrid</address>
+                </div>
+                
+                <div> <!-- Columna 3: Redes sociales -->
+                    <h3>Sígueme</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.youtube.com" target="_blank" rel="noopener" title="YouTube">
+                                <img src="multimedia/youtube-icon.png" alt="YouTube">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn">
+                                <img src="multimedia/linkedin-icon.png" alt="LinkedIn">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener" title="Instagram">
+                                <img src="multimedia/instagram-icon.png" alt="Instagram">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div> <!-- Copyright: Se repite en todas las páginas -->
+                <p>© 2024 [Nombre] - Psicóloga Clínica. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Enlace al archivo JavaScript (funcionalidad del menú móvil) -->
+    <script src="js/script.js"></script>
+</body>
+</html>
