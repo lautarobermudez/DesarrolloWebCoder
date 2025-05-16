@@ -33,10 +33,10 @@
     
     /* Elementos de diseño */
     --transition: all 0.3s ease;
-    --border-radius: 8px;
+    --border-radius: 10px;
     --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-    --card-shadow-hover: 0 12px 20px rgba(0, 0, 0, 0.05);
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    --card-shadow-hover: 0 12px 20px rgba(0, 0, 0, 0.15);
     
     /* Contenedores */
     --container-width: 1200px;
@@ -636,6 +636,222 @@ img {
     color: rgba(255, 255, 255, 0.7);
 }
 
+
+/* ====== PÁGINA SOBRE MÍ ====== */
+
+/* Banner de página */
+.page-banner {
+    background-color: var(--color-primary);
+    padding: 3rem 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.page-banner__container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.page-banner__title {
+    color: var(--color-secondary);
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Sección Sobre Mí */
+.about {
+    padding: 0 1rem 4rem;
+}
+
+.about__intro {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.about__figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+    background-color: transparent;
+    display: inline-block; 
+    border-radius: 50%; 
+    overflow: hidden;
+}
+
+.about__figure:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.about__image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    display: block;
+}
+
+.about__figure:hover .about__image {
+    filter: brightness(1.05) saturate(1.1);
+}
+
+.about__caption {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--color-accent);
+    font-style: italic;
+}
+
+.about__bio {
+    flex: 1;
+}
+
+.about__text {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Sección de Formación y Credenciales */
+.education {
+    margin-bottom: 3rem;
+}
+
+.education__title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary-dark);
+}
+
+.education__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.education__item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-gray);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.education__item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.education__year {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+}
+
+.education__content {
+    flex: 1;
+}
+
+.education__degree {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary-dark);
+}
+
+.education__institution {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* Sección de Enfoque Terapéutico */
+.approach {
+    margin-bottom: 3rem;
+}
+
+.approach__title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary-dark);
+}
+
+.approach__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.approach__item {
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 1.5rem;
+    transition: var(--transition);
+}
+
+.approach__item:hover {
+    background-color: var(--color-gray);
+}
+
+.approach__subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-primary-dark);
+}
+
+.approach__text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Sección CTA (Call to Action) */
+.cta {
+    background-color: var(--color-gray);
+    border-radius: var(--border-radius);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    box-shadow: var(--box-shadow);
+}
+
+.cta__title {
+    font-size: 1.5rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 1rem;
+}
+
+.cta__text {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta__button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.cta__button:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-secondary);
+    transform: translateY(-3px);
+}
+
 /* ====== RESPONSIVE ====== */
 /* Versión escritorio */
 @media (min-width: 768px) {
@@ -711,5 +927,68 @@ img {
     .footer__grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
+    }
+
+    /* Banner de página */
+    .page-banner {
+        padding: 3rem 2rem;
+    }
+    
+    .page-banner__title {
+        font-size: 2.5rem;
+    }
+    
+    /* Sección Sobre Mí */
+    .about__intro {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .about__figure {
+        flex: 0 0 300px;
+    }
+    
+    .about__image {
+        max-width: 100%;
+    }
+    
+    .about__bio {
+        padding-left: 2rem;
+    }
+    
+    /* Sección de Formación y Credenciales */
+    .education__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .education__item {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .education__year {
+        flex: 0 0 80px;
+        margin-bottom: 0;
+    }
+    
+    /* Sección de Enfoque Terapéutico */
+    .approach__container {
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+    .approach__item {
+        flex: 1;
+    }
+    
+    /* Sección CTA */
+    .cta {
+        padding: 3rem;
+    }
+    
+    .cta__title {
+        font-size: 1.75rem;
     }
 }

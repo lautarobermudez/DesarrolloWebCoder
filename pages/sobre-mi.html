@@ -5,184 +5,196 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Metadatos SEO para mejorar el posicionamiento en buscadores -->
-    <meta name="description" content="Conoce a [Nombre], psicóloga clínica especializada en terapia cognitivo-conductual y mindfulness con más de 10 años de experiencia.">
+    <meta name="description" content="Conoce a Patricia Castro, psicóloga clínica especializada en terapia cognitivo-conductual y mindfulness con más de 10 años de experiencia.">
     <meta name="keywords" content="psicóloga, terapia cognitivo-conductual, mindfulness, experiencia profesional">
-    <meta name="author" content="[Nombre]">
+    <meta name="author" content="Patricia Castro">
     
-    <title>Psicología Clínica con [Nombre] - Sobre Mí</title>
+    <title>Psicología Clínica con Patricia Castro - Sobre Mí</title>
     
     <!-- Añadir favicon (mismo que en index.html para mantener consistencia) -->
     <link rel="icon" type="image/png" href="../multimedia/faviconPC.png">
     <link rel="shortcut icon" href="../multimedia/faviconPC.png">
     
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- ICONS - FontAwesome para iconos modernos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header> <!-- Header actualizado igual que en index.html -->
-        <div>
-            <div>
+    <header class="header"> <!-- Header actualizado igual que en index.html -->
+        <div class="header__container">
+            <div class="header__logo">
                 <!-- Logo como enlace a la página principal -->
-                <a href="../index.html">
-                    <img src="../multimedia/LogoPCP.png" alt="Psicología Clínica">
+                <a href="../index.html" class="header__logo-link">
+                    <img src="../multimedia/faviconPC.png" alt="Psicología Clínica" class="header__logo-img">
+                    <span class="header__logo-text">Patricia Castro - PSI</span>
                 </a>
             </div>
             
             <!-- Mejora de accesibilidad en la navegación -->
-            <nav role="navigation" aria-label="Menú principal">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="sobre-mi.html" aria-current="page">Sobre Mí</a></li>  <!-- Página activa actual -->
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+            <button class="header__toggle" aria-expanded="false" aria-controls="header__menu">☰</button>
+            <nav class="header__nav" role="navigation" aria-label="Menú principal">
+                <ul class="header__menu" id="header__menu">
+                    <li class="header__item"><a href="../index.html" class="header__link">Inicio</a></li>
+                    <li class="header__item"><a href="sobre-mi.html" class="header__link header__link--active" aria-current="page">Sobre Mí</a></li>
+                    <li class="header__item"><a href="servicios.html" class="header__link">Servicios</a></li>
+                    <li class="header__item"><a href="blog.html" class="header__link">Blog</a></li>
+                    <li class="header__item"><a href="contacto.html" class="header__link">Contacto</a></li>
                 </ul>
-                <button aria-expanded="false" aria-controls="menu">☰</button>
             </nav>
         </div>
     </header>
 
     <!-- ===================== MAIN CONTENT ===================== -->
     <main>
-        <!-- Agregar una clase para el banner superior -->
-        <section>
-            <div>
-                <h1>Sobre Mí</h1>
+        <!-- Banner de página con título principal -->
+        <section class="page-banner">
+            <div class="page-banner__container">
+                <h1 class="page-banner__title">Sobre Mí</h1>
             </div>
         </section>
         
-        <section>
-            <div>
-                <div> <!-- Contenedor flexible para imagen + biografía -->
-                    <figure> <!-- FIGURE: Etiqueta semántica para contenido multimedia + descripción -->
-                        <!-- Agregar atributos de carga para optimización -->
-                        <img src="../multimedia/FotoPat.jpg" alt="Foto de perfil de [Nombre], psicóloga clínica" loading="lazy">
-                        <figcaption>Psicóloga clínica con más de 10 años de experiencia</figcaption>
+        <section class="about">
+            <div class="container">
+                <div class="about__intro"> <!-- Contenedor flexible para imagen + biografía -->
+                    <figure class="about__figure"> 
+                        <img src="../multimedia/FotoPat.jpg" alt="Foto de perfil de Patricia Castro, psicóloga clínica" loading="lazy" class="about__image">
                     </figure>
 
                     <!-- Biografía: Texto descriptivo -->
-                    <div>
-                        <p>Soy [Nombre], psicóloga clínica con más de 10 años de experiencia en el tratamiento de adultos.
+                    <div class="about__bio">
+                        <p class="about__text">Soy Patricia Castro, psicóloga clínica con más de 10 años de experiencia en el tratamiento de adultos.
                         Me especializo en terapia cognitivo-conductual y mindfulness, ayudando a mis pacientes a desarrollar herramientas
                         efectivas para afrontar desafíos emocionales.</p>
                         
-                        <p>Mi enfoque terapéutico se centra en crear un espacio seguro donde puedas explorar tus pensamientos y emociones
+                        <p class="about__text">Mi enfoque terapéutico se centra en crear un espacio seguro donde puedas explorar tus pensamientos y emociones
                         sin juicios. Creo firmemente en el potencial de cada persona para alcanzar el bienestar emocional
                         y una vida más plena a través del autoconocimiento.</p>
                         
-                        <p>Cuento con un Máster en Psicología Clínica por la Universidad de [Universidad] y formación continua
+                        <p class="about__text">Cuento con un Máster en Psicología Clínica por la Universidad de Buenos Aires y formación continua
                         en diversas técnicas terapéuticas. Mi objetivo es acompañarte en tu proceso de crecimiento personal,
                         proporcionándote herramientas prácticas para gestionar el estrés, la ansiedad y otros desafíos emocionales.</p>
                     </div>
                 </div>
                 
                 <!-- Sección de formación y credenciales -->
-                <section>
-                    <h2>Formación y Credenciales</h2>
-                    <ul>
-                        <li>
-                            <span>2010</span>
-                            <div>
-                                <h3>Licenciatura en Psicología</h3>
-                                <p>Universidad de [Universidad]</p>
+                <section class="education">
+                    <h2 class="education__title">Formación y Credenciales</h2>
+                    <div class="education__grid">
+                        <div class="education__item">
+                            <span class="education__year">2010</span>
+                            <div class="education__content">
+                                <h3 class="education__degree">Licenciatura en Psicología</h3>
+                                <p class="education__institution">Universidad de Buenos Aires</p>
                             </div>
-                        </li>
-                        <li>
-                            <span>2012</span>
-                            <div>
-                                <h3>Máster en Psicología Clínica</h3>
-                                <p>Universidad de [Universidad]</p>
+                        </div>
+                        <div class="education__item">
+                            <span class="education__year">2012</span>
+                            <div class="education__content">
+                                <h3 class="education__degree">Máster en Psicología Clínica</h3>
+                                <p class="education__institution">Universidad de Buenos Aires</p>
                             </div>
-                        </li>
-                        <li>
-                            <span>2015</span>
-                            <div>
-                                <h3>Especialización en Terapia Cognitivo-Conductual</h3>
-                                <p>Instituto de [Instituto]</p>
+                        </div>
+                        <div class="education__item">
+                            <span class="education__year">2015</span>
+                            <div class="education__content">
+                                <h3 class="education__degree">Especialización en Terapia Cognitivo-Conductual</h3>
+                                <p class="education__institution">Instituto Argentino de Psicología</p>
                             </div>
-                        </li>
-                        <li>
-                            <span>2018</span>
-                            <div>
-                                <h3>Certificación en Mindfulness</h3>
-                                <p>Centro de [Centro]</p>
+                        </div>
+                        <div class="education__item">
+                            <span class="education__year">2018</span>
+                            <div class="education__content">
+                                <h3 class="education__degree">Certificación en Mindfulness</h3>
+                                <p class="education__institution">Centro de Mindfulness de Buenos Aires</p>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </section>
                 
                 <!-- Sección de enfoque terapéutico -->
-                <section>
-                    <h2>Mi Enfoque Terapéutico</h2>
-                    <div>
-                        <div>
-                            <h3>Terapia Cognitivo-Conductual</h3>
-                            <p>Trabajo con técnicas basadas en la evidencia para identificar y modificar patrones de pensamiento negativos que afectan tu bienestar emocional.</p>
+                <section class="approach">
+                    <h2 class="approach__title">Mi Enfoque Terapéutico</h2>
+                    <div class="approach__container">
+                        <div class="approach__item">
+                            <h3 class="approach__subtitle">Terapia Cognitivo-Conductual</h3>
+                            <p class="approach__text">Trabajo con técnicas basadas en la evidencia para identificar y modificar patrones de pensamiento negativos que afectan tu bienestar emocional.</p>
                         </div>
-                        <div>
-                            <h3>Mindfulness</h3>
-                            <p>Integro prácticas de atención plena para ayudarte a conectar con el momento presente y desarrollar una mayor conciencia de tus pensamientos y emociones.</p>
+                        <div class="approach__item">
+                            <h3 class="approach__subtitle">Mindfulness</h3>
+                            <p class="approach__text">Integro prácticas de atención plena para ayudarte a conectar con el momento presente y desarrollar una mayor conciencia de tus pensamientos y emociones.</p>
                         </div>
-                        <div>
-                            <h3>Terapia centrada en la persona</h3>
-                            <p>Creo en la importancia de establecer una relación terapéutica basada en la empatía, la aceptación incondicional y la autenticidad.</p>
+                        <div class="approach__item">
+                            <h3 class="approach__subtitle">Terapia centrada en la persona</h3>
+                            <p class="approach__text">Creo en la importancia de establecer una relación terapéutica basada en la empatía, la aceptación incondicional y la autenticidad.</p>
                         </div>
                     </div>
                 </section>
                 
                 <!-- Llamada a la acción -->
-                <div>
-                    <h2>¿Quieres dar el primer paso?</h2>
-                    <p>Estoy aquí para acompañarte en tu proceso de crecimiento personal y bienestar emocional.</p>
-                    <a href="contacto.html">Agenda tu consulta</a>
+                <div class="cta">
+                    <h2 class="cta__title">¿Quieres dar el primer paso?</h2>
+                    <p class="cta__text">Estoy aquí para acompañarte en tu proceso de crecimiento personal y bienestar emocional.</p>
+                    <a href="contacto.html" class="cta__button">Agenda tu consulta</a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- ===================== FOOTER ===================== -->
-    <!-- Footer actualizado igual que en index.html -->
-    <footer>
-        <div>
-            <div>
-                <div>
-                    <h3>Psicología Clínica</h3>
-                    <p>Un espacio seguro para tu bienestar emocional.</p>
+    <footer class="footer">
+        <div class="footer__container"> 
+            <div class="footer__grid">
+                <div class="footer__column footer__brand">
+                    <h3 class="footer__title">Psicología Clínica</h3>
+                    <p class="footer__text">Un espacio seguro para tu bienestar emocional.</p>
                 </div>
                 
-                <div>
-                    <h3>Contacto</h3>
-                    <p><a href="mailto:contacto@psicologia.com">contacto@psicologia.com</a></p>
-                    <p>Teléfono: <a href="tel:+34123456789">+34 123 456 789</a></p>
-                    <address>Dirección: Calle Principal 123, Madrid</address>
+                <div class="footer__column footer__contact">
+                    <h3 class="footer__title">Contacto</h3>
+                    <p><a href="mailto:contacto@psicologia.com" class="footer__link">contacto@psicologia.com</a></p>
+                    <p>Teléfono: <a href="tel:+541123456789" class="footer__link">+54 11 2345 6789</a></p>
+                    <address class="footer__address">Dirección: Av. Libertador 123, Villa Ballester, Buenos Aires</address>
                 </div>
                 
-                <div>
-                    <h3>Sígueme</h3>
-                    <ul>
-                        <li>
-                            <a href="https://www.youtube.com" target="_blank" rel="noopener" title="YouTube">
-                                <img src="../multimedia/youtube-icon.png" alt="YouTube">
+                <div class="footer__column footer__social">
+                    <h3 class="footer__title">Sígueme</h3>
+                    <ul class="footer__social-list">
+                        <li class="footer__social-item">
+                            <a href="https://www.youtube.com" target="_blank" rel="noopener" title="YouTube" class="footer__social-link">
+                                <i class="fab fa-youtube"></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn">
-                                <img src="../multimedia/linkedin-icon.png" alt="LinkedIn">
+                        <li class="footer__social-item">
+                            <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn" class="footer__social-link">
+                                <i class="fab fa-linkedin"></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.instagram.com" target="_blank" rel="noopener" title="Instagram">
-                                <img src="../multimedia/instagram-icon.png" alt="Instagram">
+                        <li class="footer__social-item">
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener" title="Instagram" class="footer__social-link">
+                                <i class="fab fa-instagram"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
             
-            <div>
-                <p>© 2024 [Nombre] - Psicóloga Clínica. Todos los derechos reservados.</p>
+            <div class="footer__copyright">
+                <p>© 2024 Patricia Castro - Psicóloga Clínica. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <script src="../js/script.js"></script>
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
