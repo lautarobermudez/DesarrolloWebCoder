@@ -852,6 +852,107 @@ img {
     transform: translateY(-3px);
 }
 
+/* Estilos adicionales para la página de servicios */
+
+/* Introducción a servicios */
+.services__intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+/* Acordeón FAQ */
+.faq {
+    margin: 4rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: var(--color-primary-dark);
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+/* Personalización del acordeón Bootstrap */
+.accordion {
+    --bs-accordion-bg: var(--color-secondary);
+    --bs-accordion-active-bg: var(--color-light);
+    --bs-accordion-active-color: var(--color-primary-dark);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(87, 143, 202, 0.25);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.accordion-item {
+    border-color: rgba(87, 143, 202, 0.1);
+}
+
+.accordion-header {
+    margin: 0;
+}
+
+.accordion-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--color-dark);
+    background-color: var(--color-secondary);
+    padding: 1.25rem;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--color-primary-dark);
+    background-color: var(--color-light);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(87, 143, 202, 0.25);
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23578FCA'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-body {
+    padding: 1.25rem 1.5rem;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Modificaciones para la sección CTA en servicios */
+.cta__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 300px;
+    margin: 1.5rem auto 0;
+}
+
+.cta__button--secondary {
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.cta__button--secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
 /* ====== RESPONSIVE ====== */
 /* Versión escritorio */
 @media (min-width: 768px) {
@@ -990,5 +1091,11 @@ img {
     
     .cta__title {
         font-size: 1.75rem;
+    }
+
+     .cta__buttons {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 100%;
     }
 }

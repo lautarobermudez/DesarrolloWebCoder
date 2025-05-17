@@ -5,39 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Metadatos SEO para mejorar el posicionamiento en buscadores -->
-    <meta name="description" content="Servicios de psicología: terapia individual, talleres grupales y sesiones online con [Nombre]. Tratamiento especializado para ansiedad, depresión y estrés.">
+    <meta name="description" content="Servicios de psicología: terapia individual, talleres grupales y sesiones online con Patricia Castro. Tratamiento especializado para ansiedad, depresión y estrés.">
     <meta name="keywords" content="servicios psicología, terapia individual, talleres grupales, terapia online, ansiedad, depresión">
-    <meta name="author" content="[Nombre]">
+    <meta name="author" content="Patricia Castro">
     
-    <title>Psicología Clínica con [Nombre] - Servicios</title>
+    <title>Psicología Clínica con Patricia Castro - Servicios</title>
     
     <!-- Añadir favicon (mismo que en las otras páginas) -->
     <link rel="icon" type="image/png" href="../multimedia/faviconPC.png">
     <link rel="shortcut icon" href="../multimedia/faviconPC.png">
     
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- ICONS - FontAwesome para iconos modernos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
     <!-- ===================== HEADER ===================== -->
-    <header>
-        <div>
-            <!-- Logo como enlace a la página principal -->
-            <div>
-                <a href="../index.html">
-                    <img src="../multimedia/LogoPCP.png" alt="Psicología Clínica">
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <!-- Logo como enlace a la página principal -->
+                <a href="../index.html" class="header__logo-link">
+                    <img src="../multimedia/faviconPC.png" alt="Psicología Clínica" class="header__logo-img">
+                    <span class="header__logo-text">Patricia Castro - PSI</span>
                 </a>
             </div>
             
             <!-- Mejora de accesibilidad en la navegación -->
-            <nav role="navigation" aria-label="Menú principal">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="sobre-mi.html">Sobre Mí</a></li>
-                    <li><a href="servicios.html" aria-current="page">Servicios</a></li> <!-- Página activa -->
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+            <button class="header__toggle" aria-expanded="false" aria-controls="header__menu">☰</button>
+            <nav class="header__nav" role="navigation" aria-label="Menú principal">
+                <ul class="header__menu" id="header__menu">
+                    <li class="header__item"><a href="../index.html" class="header__link">Inicio</a></li>
+                    <li class="header__item"><a href="sobre-mi.html" class="header__link">Sobre Mí</a></li>
+                    <li class="header__item"><a href="servicios.html" class="header__link header__link--active" aria-current="page">Servicios</a></li>
+                    <li class="header__item"><a href="blog.html" class="header__link">Blog</a></li>
+                    <li class="header__item"><a href="contacto.html" class="header__link">Contacto</a></li>
                 </ul>
-                <button aria-expanded="false" aria-controls="menu">☰</button>
             </nav>
         </div>
     </header>
@@ -45,148 +59,115 @@
     <!-- ===================== MAIN CONTENT ===================== -->
     <main>
         <!-- Banner de página con título principal -->
-        <section>
-            <div>
-                <h1>Servicios</h1>  <!-- Título principal de la página -->
+        <section class="page-banner">
+            <div class="page-banner__container">
+                <h1 class="page-banner__title">Servicios</h1>
             </div>
         </section>
         
-        <section>
-            <div>
+        <!-- Sección principal de servicios -->
+        <section class="services">
+            <div class="container">
                 <!-- Descripción general de los servicios -->
-                <div>
-                    <p>Ofrezco diversos servicios adaptados a las necesidades específicas de cada persona. Todos los servicios están orientados a promover tu bienestar emocional y mejorar tu calidad de vida a través de técnicas basadas en la evidencia científica.</p>
+                <div class="services__intro">
+                    <h2 class="services__title">Servicios personalizados para tu bienestar</h2>
+                    <p>Conocé cómo puedo ayudarte a mejorar tu calidad de vida con técnicas basadas en la evidencia científica, adaptadas a tus necesidades específicas.</p>
                 </div>
 
-                <!-- Contenedor flexible para servicios -->
-                <div>
-                    <!-- SERVICE-ITEM: Terapia Individual con ID para anclaje -->
-                    <section id="terapia-individual">
-                        <div>
-                            <img src="../multimedia/terapia_individual.jpg" alt="Icono de terapia individual" loading="lazy">
+                <!-- Grid de servicios - Usando la misma estructura que en index.html -->
+                <div class="services__grid">
+                    <!-- Servicio 1: Terapia Individual -->
+                    <article id="terapia-individual" class="service-card">
+                        <div class="service-card__image">
+                            <img src="../multimedia/terapia_individual.jpg" alt="Terapia individual">
                         </div>
-                        <!-- Subtítulo jerárquico (h2) -->
-                        <h2>Terapia Individual</h2>
-                        <p>Sesiones personalizadas de 50 minutos para adultos. Abordamos problemas de ansiedad, depresión, estrés, duelo y otros desafíos emocionales.</p>
-                        <p>La terapia individual es un espacio confidencial donde podrás explorar y resolver problemas específicos que están afectando tu bienestar emocional.</p>
-                        
-                        <!-- Lista de beneficios y detalles del servicio -->
-                        <div>
-                            <h3>Beneficios de la terapia individual:</h3>
-                            <ul>
-                                <li>Atención personalizada enfocada en tus necesidades específicas</li>
-                                <li>Desarrollo de estrategias adaptadas a tu situación particular</li>
-                                <li>Espacio confidencial para expresar preocupaciones libremente</li>
-                                <li>Seguimiento continuo de tu progreso</li>
-                            </ul>
-                            
-                            <div>
-                                <p><strong>Duración:</strong> 50 minutos</p>
-                                <p><strong>Modalidad:</strong> Presencial u online</p>
-                                <p><strong>Frecuencia recomendada:</strong> Semanal (inicial), quincenal (seguimiento)</p>
-                            </div>
-                            
-                            <!-- Botón CTA específico para el servicio -->
-                            <a href="contacto.html">Solicitar información</a>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Terapia Individual</h3>
+                            <p class="service-card__text">Un espacio confidencial donde podrás explorar y resolver problemas específicos que están afectando tu bienestar.</p>
+                            <a href="#terapia-details" class="service-card__link" data-bs-toggle="modal" data-bs-target="#terapiaModal">Ver detalles</a>
                         </div>
-                    </section>
+                    </article>
                     
-                    <!-- Talleres Temáticos con ID para anclaje -->
-                    <section id="talleres">
-                        <div>
-                            <img src="../multimedia/talleres-tematicos.png" alt="Icono de talleres tematicos" loading="lazy">
+                    <!-- Servicio 2: Talleres Temáticos -->
+                    <article id="talleres" class="service-card">
+                        <div class="service-card__image">
+                            <img src="../multimedia/talleres-tematicos.png" alt="Talleres temáticos">
                         </div>
-                        <h2>Talleres Temáticos</h2>
-                        <p>Clase y conferencias enfocadas en temas específicos: gestión del estrés, habilidades sociales, regulación emocional y tematicas y conceptos psicologicos.</p>
-                        <p>Los talleres temáticos ofrecen la oportunidad de aprender y practicar nuevas habilidades en un entorno profesional.</p>
-                        
-                        <!-- Detalles de talleres grupales -->
-                        <div>
-                            <h3>Talleres disponibles:</h3>
-                            <ul>
-                                <li><strong>Mindfulness y reducción del estrés</strong> - 6 sesiones semanales</li>
-                                <li><strong>Gestión de la ansiedad</strong> - 8 sesiones semanales</li>
-                                <li><strong>Habilidades sociales y asertividad</strong> - 6 sesiones semanales</li>
-                                <li><strong>Regulación emocional</strong> - 8 sesiones semanales</li>
-                            </ul>
-                            
-                            <div>
-                                <p><strong>Duración:</strong> 90 minutos por sesión</p>
-                                <p><strong>Participantes:</strong> Grupos reducidos (máximo 8 personas)</p>
-                                <p><strong>Modalidad:</strong> Presencial</p>
-                            </div>
-                            
-                            <a href="contacto.html">Consultar próximas fechas</a>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Talleres Temáticos</h3>
+                            <p class="service-card__text">Una oportunidad para aprender y practicar nuevas habilidades en un entorno profesional.</p>
+                            <a href="#talleres-details" class="service-card__link" data-bs-toggle="modal" data-bs-target="#talleresModal">Ver detalles</a>
                         </div>
-                    </section>
+                    </article>
                     
-                    <!-- SERVICE-ITEM: Sesiones Online con ID para anclaje -->
-                    <section id="online">
-                        <div>
-                            <img src="../multimedia/terapia_online.jpg" alt="Icono de sesiones online" loading="lazy">
+                    <!-- Servicio 3: Sesiones Online -->
+                    <article id="online" class="service-card">
+                        <div class="service-card__image">
+                            <img src="../multimedia/terapia_online.jpg" alt="Terapia online">
                         </div>
-                        <h2>Sesiones Online</h2>
-                        <p>Terapia a distancia con la misma calidad y beneficios que las sesiones presenciales. Ideal para personas con agenda ocupada o dificultades de desplazamiento.</p>
-                        <p>Las sesiones online te permiten acceder a apoyo psicológico profesional desde la comodidad de tu hogar u oficina.</p>
-                        
-                        <!-- Detalles de sesiones online -->
-                        <div>
-                            <h3>Ventajas de la terapia online:</h3>
-                            <ul>
-                                <li>Ahorro de tiempo en desplazamientos</li>
-                                <li>Mayor flexibilidad horaria</li>
-                                <li>Acceso desde cualquier ubicación</li>
-                                <li>Mismo proceso terapéutico y resultados que la terapia presencial</li>
-                                <li>Plataforma segura y confidencial</li>
-                            </ul>
-                            
-                            <div>
-                                <p><strong>Duración:</strong> 50 minutos</p>
-                                <p><strong>Plataforma:</strong> Zoom / Google Meet (a elegir)</p>
-                                <p><strong>Requisitos:</strong> Conexión a internet estable y espacio privado</p>
-                            </div>
-                            
-                            <a href="contacto.html">Agendar sesión online</a>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Sesiones Online</h3>
+                            <p class="service-card__text">Accede a apoyo psicológico profesional desde la comodidad de tu hogar u oficina.</p>
+                            <a href="#online-details" class="service-card__link" data-bs-toggle="modal" data-bs-target="#onlineModal">Ver detalles</a>
                         </div>
-                    </section>
+                    </article>
                 </div>
                 
+                
                 <!-- Sección de preguntas frecuentes -->
-                <section>
-                    <h2>Preguntas frecuentes</h2>
+                <section class="faq">
+                    <h2 class="section-title">Preguntas frecuentes</h2>
                     
-                    <div>
-                        <div>
-                            <h3>¿Cuánto dura el proceso terapéutico?</h3>
-                            <div>
-                                <p>La duración del proceso terapéutico varía según las necesidades individuales de cada persona. Algunas personas experimentan mejoras significativas en pocas semanas, mientras que otras pueden beneficiarse de un acompañamiento más prolongado. Durante la primera sesión, estableceremos objetivos claros y podremos estimar mejor la duración del proceso.</p>
+                    <div class="accordion" id="accordionFAQ">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    ¿Cuánto dura el proceso terapéutico?
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    <p>La duración del proceso terapéutico varía según las necesidades individuales de cada persona. Algunas personas experimentan mejoras significativas en pocas semanas, mientras que otras pueden beneficiarse de un acompañamiento más prolongado. Durante la primera sesión, estableceremos objetivos claros y podremos estimar mejor la duración del proceso.</p>
+                                </div>
                             </div>
                         </div>
                         
-                        <div>
-                            <h3>¿Con qué frecuencia debo asistir a terapia?</h3>
-                            <div>
-                                <p>Lo habitual es comenzar con sesiones semanales para establecer una buena base terapéutica. A medida que se van alcanzando objetivos, podemos espaciar las sesiones a frecuencia quincenal o mensual. El ritmo siempre se adapta a tus necesidades y circunstancias particulares.</p>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    ¿Con qué frecuencia debo asistir a terapia?
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    <p>Lo habitual es comenzar con sesiones semanales para establecer una buena base terapéutica. A medida que se van alcanzando objetivos, podemos espaciar las sesiones a frecuencia quincenal o mensual. El ritmo siempre se adapta a tus necesidades y circunstancias particulares.</p>
+                                </div>
                             </div>
                         </div>
                         
-                        <div>
-                            <h3>¿La terapia online es tan efectiva como la presencial?</h3>
-                            <div>
-                                <p>Sí, numerosos estudios científicos demuestran que la terapia online tiene la misma efectividad que la terapia presencial. Lo importante es que te sientas cómodo/a con el formato elegido y que dispongas de un espacio privado y tranquilo para las sesiones online.</p>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    ¿La terapia online es tan efectiva como la presencial?
+                                </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    <p>Sí, numerosos estudios científicos demuestran que la terapia online tiene la misma efectividad que la terapia presencial. Lo importante es que te sientas cómodo/a con el formato elegido y que dispongas de un espacio privado y tranquilo para las sesiones online.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 
                 <!-- Sección CTA -->
-                <section>
-                    <div>
-                        <h2>¿Necesitas más información?</h2>
-                        <p>Estoy a tu disposición para resolver cualquier duda sobre mis servicios o para ayudarte a determinar qué opción se adapta mejor a tus necesidades.</p>
-                        <div>
-                            <a href="contacto.html">Contactar ahora</a>
-                            <a href="tel:+34123456789">Llamar</a>
+                <section class="cta">
+                    <div class="cta__container">
+                        <h2 class="cta__title">¿Necesitas más información?</h2>
+                        <p class="cta__text">Estoy a tu disposición para resolver cualquier duda sobre mis servicios o para ayudarte a determinar qué opción se adapta mejor a tus necesidades.</p>
+                        <div class="cta__buttons">
+                            <a href="contacto.html" class="cta__button">Contactar ahora</a>
+                            <a href="tel:+541123456789" class="cta__button cta__button--secondary">Llamar</a>
                         </div>
                     </div>
                 </section>
@@ -195,50 +176,51 @@
     </main>
 
     <!-- ===================== FOOTER ===================== -->
-    <footer>
-        <div>
-            <div>
-                <div>
-                    <h3>Psicología Clínica</h3>
-                    <p>Un espacio seguro para tu bienestar emocional.</p>
+    <footer class="footer">
+        <div class="footer__container"> 
+            <div class="footer__grid">
+                <div class="footer__column footer__brand">
+                    <h3 class="footer__title">Psicología Clínica</h3>
+                    <p class="footer__text">Un espacio seguro para tu bienestar emocional.</p>
                 </div>
                 
-                <div>
-                    <h3>Contacto</h3>
-                    <p><a href="mailto:contacto@psicologia.com">contacto@psicologia.com</a></p>
-                    <p>Teléfono: <a href="tel:+34123456789">+34 123 456 789</a></p>
-                    <address>Dirección: Calle Principal 123, Madrid</address>
+                <div class="footer__column footer__contact">
+                    <h3 class="footer__title">Contacto</h3>
+                    <p><a href="mailto:contacto@psicologia.com" class="footer__link">contacto@psicologia.com</a></p>
+                    <p>Teléfono: <a href="tel:+541123456789" class="footer__link">+54 11 2345 6789</a></p>
+                    <address class="footer__address">Dirección: Av. Libertador 123, Villa Ballester, Buenos Aires</address>
                 </div>
                 
-                <div>
-                    <h3>Sígueme</h3>
-                    <ul>
-                        <li>
-                            <a href="https://www.youtube.com" target="_blank" rel="noopener" title="YouTube">
-                                <img src="../multimedia/youtube-icon.png" alt="YouTube">
+                <div class="footer__column footer__social">
+                    <h3 class="footer__title">Sígueme</h3>
+                    <ul class="footer__social-list">
+                        <li class="footer__social-item">
+                            <a href="https://www.youtube.com" target="_blank" rel="noopener" title="YouTube" class="footer__social-link">
+                                <i class="fab fa-youtube"></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn">
-                                <img src="../multimedia/linkedin-icon.png" alt="LinkedIn">
+                        <li class="footer__social-item">
+                            <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn" class="footer__social-link">
+                                <i class="fab fa-linkedin"></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.instagram.com" target="_blank" rel="noopener" title="Instagram">
-                                <img src="../multimedia/instagram-icon.png" alt="Instagram">
+                        <li class="footer__social-item">
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener" title="Instagram" class="footer__social-link">
+                                <i class="fab fa-instagram"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
             
-            <div>
-                <p>© 2024 [Nombre] - Psicóloga Clínica. Todos los derechos reservados.</p>
+            <div class="footer__copyright">
+                <p>© 2024 Patricia Castro - Psicóloga Clínica. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Enlace al archivo JavaScript para la funcionalidad del acordeón y menú móvil -->
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/script.js"></script>
 </body>
 </html>
