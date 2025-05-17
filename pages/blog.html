@@ -4,242 +4,267 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- MEJORA 1: Metadatos SEO para mejorar el posicionamiento en buscadores -->
-    <meta name="description" content="Blog de psicología con artículos sobre salud mental, manejo de ansiedad, relaciones saludables y bienestar emocional. Por [Nombre], psicóloga clínica.">
+    <!-- Metadatos SEO para mejorar el posicionamiento en buscadores -->
+    <meta name="description" content="Blog de psicología con artículos sobre salud mental, manejo de ansiedad, relaciones saludables y bienestar emocional. Por Patricia Castro, psicóloga clínica.">
     <meta name="keywords" content="blog psicología, salud mental, ansiedad, límites saludables, sueño, bienestar emocional">
-    <meta name="author" content="[Nombre]">
+    <meta name="author" content="Patricia Castro">
     
-    <title>Psicología Clínica con [Nombre] - Blog</title>
+    <title>Psicología Clínica con Patricia Castro - Blog</title>
     
-    <!-- MEJORA 2: Añadir favicon (mismo que en las otras páginas) -->
+    <!-- Añadir favicon (mismo que en las otras páginas) -->
     <link rel="icon" type="image/png" href="../multimedia/faviconPC.png">
     <link rel="shortcut icon" href="../multimedia/faviconPC.png">
     
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- ICONS - FontAwesome para iconos modernos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
     <!-- ===================== HEADER ===================== -->
-    <header>
-        <div>
-            <!-- MEJORA 3: Logo como enlace a la página principal -->
-            <div>
-                <a href="../index.html">
-                    <img src="../multimedia/LogoPCP.png" alt="Psicología Clínica">
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <!-- Logo como enlace a la página principal -->
+                <a href="../index.html" class="header__logo-link">
+                    <img src="../multimedia/faviconPC.png" alt="Psicología Clínica" class="header__logo-img">
+                    <span class="header__logo-text">Patricia Castro - PSI</span>
                 </a>
             </div>
             
-            <!-- MEJORA 4: Mejora de accesibilidad en la navegación -->
-            <nav role="navigation" aria-label="Menú principal">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="sobre-mi.html">Sobre Mí</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="blog.html" aria-current="page">Blog</a></li> <!-- Página activa -->
-                    <li><a href="contacto.html">Contacto</a></li>
+            <!-- Mejora de accesibilidad en la navegación -->
+            <button class="header__toggle" aria-expanded="false" aria-controls="header__menu">☰</button>
+            <nav class="header__nav" role="navigation" aria-label="Menú principal">
+                <ul class="header__menu" id="header__menu">
+                    <li class="header__item"><a href="../index.html" class="header__link">Inicio</a></li>
+                    <li class="header__item"><a href="sobre-mi.html" class="header__link">Sobre Mí</a></li>
+                    <li class="header__item"><a href="servicios.html" class="header__link">Servicios</a></li>
+                    <li class="header__item"><a href="blog.html" class="header__link header__link--active" aria-current="page">Blog</a></li>
+                    <li class="header__item"><a href="contacto.html" class="header__link">Contacto</a></li>
                 </ul>
-                <button aria-expanded="false" aria-controls="menu">☰</button>
             </nav>
         </div>
     </header>
 
     <!-- ===================== MAIN CONTENT ===================== -->
     <main>
-        <!-- MEJORA 5: Banner de página con título principal -->
-        <section>
-            <div>
-                <h1>Blog</h1> <!-- Título principal de la sección -->
+        <!-- Banner de página con título principal -->
+        <section class="page-banner">
+            <div class="page-banner__container">
+                <h1 class="page-banner__title">Blog</h1>
             </div>
         </section>
         
-        <section>
-            <div>
-                <!-- MEJORA 6: Introducción al blog -->
-                <div>
+        <section class="blog">
+            <div class="container">
+                <!-- Introducción al blog -->
+                <div class="blog__intro">
                     <p>Bienvenido/a a mi blog, un espacio donde comparto artículos, reflexiones y recursos sobre psicología y bienestar emocional. Mi objetivo es acercar el conocimiento psicológico a todos de manera práctica y accesible.</p>
                 </div>
                 
-                <!-- MEJORA 7: Filtros de categorías -->
-                <div>
-                    <h2>Categorías</h2>
-                    <ul>
-                        <li><a href="#">Todos</a></li>
-                        <li><a href="#">Ansiedad</a></li>
-                        <li><a href="#">Relaciones</a></li>
-                        <li><a href="#">Bienestar</a></li>
-                        <li><a href="#">Autoestima</a></li>
+                <!-- Filtros de categorías -->
+                <div class="blog__filters">
+                    <h2 class="blog__filters-title">Categorías</h2>
+                    <ul class="blog__filters-list">
+                        <li class="blog__filters-item"><a href="#" class="blog__filters-link blog__filters-link--active">Todos</a></li>
+                        <li class="blog__filters-item"><a href="#" class="blog__filters-link">Ansiedad</a></li>
+                        <li class="blog__filters-item"><a href="#" class="blog__filters-link">Relaciones</a></li>
+                        <li class="blog__filters-item"><a href="#" class="blog__filters-link">Bienestar</a></li>
+                        <li class="blog__filters-item"><a href="#" class="blog__filters-link">Autoestima</a></li>
                     </ul>
                 </div>
                 
                 <!-- Grid de artículos usando CSS Grid/Flexbox -->
-                <div>
+                <div class="blog__grid">
                     <!-- ARTICLE 1: Ansiedad -->
-                    <article>
-                        <div>
-                            <!-- MEJORA 8: Optimización de imágenes con lazy loading -->
-                            <img src="../img/blog-ansiedad.jpg" alt="Técnicas para reducir la ansiedad: persona respirando profundamente en un entorno tranquilo" loading="lazy">
-                            <!-- MEJORA 9: Añadir etiqueta de categoría -->
-                            <span>Ansiedad</span>
+                    <article class="blog-card">
+                        <div class="blog-card__image">
+                            <!-- Optimización de imágenes con lazy loading -->
+                            <img src="../multimedia/Ansiedad.jpg" alt="Técnicas para reducir la ansiedad: persona respirando profundamente en un entorno tranquilo" loading="lazy">
+                            <!-- Etiqueta de categoría -->
+                            <span class="blog-card__category">Ansiedad</span>
                         </div>
-                        <div>
-                            <h2><a href="blog/tecnicas-ansiedad.html">5 Técnicas para Reducir la Ansiedad en el Día a Día</a></h2>
-                            <!-- MEJORA 10: Fecha y tiempo de lectura -->
-                            <div>
-                                <time datetime="2024-03-15">15 de marzo, 2024</time>
-                                <span>5 min de lectura</span>
+                        <div class="blog-card__content">
+                            <h2 class="blog-card__title"><a href="blog/tecnicas-ansiedad.html">5 Técnicas para Reducir la Ansiedad en el Día a Día</a></h2>
+                            <!-- Fecha y tiempo de lectura -->
+                            <div class="blog-card__meta">
+                                <time datetime="2024-03-15" class="blog-card__date">15 de marzo, 2024</time>
+                                <span class="blog-card__reading-time">5 min de lectura</span>
                             </div>
-                            <p>Estrategias prácticas que puedes implementar para manejar la ansiedad cotidiana y recuperar la sensación de control en momentos difíciles.</p>
-                            <a href="blog/tecnicas-ansiedad.html">Leer más</a>
+                            <p class="blog-card__excerpt">Estrategias prácticas que puedes implementar para manejar la ansiedad cotidiana y recuperar la sensación de control en momentos difíciles.</p>
+                            <a href="blog/tecnicas-ansiedad.html" class="blog-card__link">Leer más</a>
                         </div>
                     </article>
                     
                     <!-- ARTICLE 2: Relaciones -->
-                    <article>
-                        <div>
-                            <img src="../img/blog-limites.jpg" alt="Representación de límites saludables: persona estableciendo una frontera clara en una conversación" loading="lazy">
-                            <span>Relaciones</span>
+                    <article class="blog-card">
+                        <div class="blog-card__image">
+                            <img src="../multimedia/SelfLove.jpg" alt="Representación de límites saludables: persona estableciendo una frontera clara en una conversación" loading="lazy">
+                            <span class="blog-card__category">Relaciones</span>
                         </div>
-                        <div>
-                            <h2><a href="blog/limites-saludables.html">Cómo Establecer Límites Saludables en tus Relaciones</a></h2>
-                            <div>
-                                <time datetime="2024-02-28">28 de febrero, 2024</time>
-                                <span>6 min de lectura</span>
+                        <div class="blog-card__content">
+                            <h2 class="blog-card__title"><a href="blog/limites-saludables.html">Cómo Establecer Límites Saludables en tus Relaciones</a></h2>
+                            <div class="blog-card__meta">
+                                <time datetime="2024-02-28" class="blog-card__date">28 de febrero, 2024</time>
+                                <span class="blog-card__reading-time">6 min de lectura</span>
                             </div>
-                            <p>Aprende a crear y mantener límites que promuevan relaciones más sanas y equilibradas, respetando tus necesidades y las de los demás.</p>
-                            <a href="blog/limites-saludables.html">Leer más</a>
+                            <p class="blog-card__excerpt">Aprende a crear y mantener límites que promuevan relaciones más sanas y equilibradas, respetando tus necesidades y las de los demás.</p>
+                            <a href="blog/limites-saludables.html" class="blog-card__link">Leer más</a>
                         </div>
                     </article>
                     
                     <!-- ARTICLE 3: Bienestar -->
-                    <article>
-                        <div>
-                            <img src="../img/blog-sueno.jpg" alt="Persona durmiendo plácidamente ilustrando la importancia del sueño para la salud mental" loading="lazy">
-                            <span>Bienestar</span>
+                    <article class="blog-card">
+                        <div class="blog-card__image">
+                            <img src="../multimedia/Sueño.jpg" alt="Persona durmiendo plácidamente ilustrando la importancia del sueño para la salud mental" loading="lazy">
+                            <span class="blog-card__category">Bienestar</span>
                         </div>
-                        <div>
-                            <h2><a href="blog/sueno-salud-mental.html">El Impacto del Sueño en tu Salud Mental</a></h2>
-                            <div>
-                                <time datetime="2024-02-10">10 de febrero, 2024</time>
-                                <span>7 min de lectura</span>
+                        <div class="blog-card__content">
+                            <h2 class="blog-card__title"><a href="blog/sueno-salud-mental.html">El Impacto del Sueño en tu Salud Mental</a></h2>
+                            <div class="blog-card__meta">
+                                <time datetime="2024-02-10" class="blog-card__date">10 de febrero, 2024</time>
+                                <span class="blog-card__reading-time">7 min de lectura</span>
                             </div>
-                            <p>Descubre la relación entre los hábitos de sueño y tu bienestar emocional, así como estrategias efectivas para mejorar la calidad de tu descanso.</p>
-                            <a href="blog/sueno-salud-mental.html">Leer más</a>
+                            <p class="blog-card__excerpt">Descubre la relación entre los hábitos de sueño y tu bienestar emocional, así como estrategias efectivas para mejorar la calidad de tu descanso.</p>
+                            <a href="blog/sueno-salud-mental.html" class="blog-card__link">Leer más</a>
                         </div>
                     </article>
                     
-                    <!-- MEJORA 11: Artículo adicional -->
-                    <article>
-                        <div>
-                            <img src="../img/blog-autocompasion.jpg" alt="Persona practicando mindfulness y autocompasión" loading="lazy">
-                            <span>Autoestima</span>
+                    <!-- ARTICLE 4: Autoestima -->
+                    <article class="blog-card">
+                        <div class="blog-card__image">
+                            <img src="../multimedia/SelfCare.jpg" alt="Persona practicando mindfulness y autocompasión" loading="lazy">
+                            <span class="blog-card__category">Autoestima</span>
                         </div>
-                        <div>
-                            <h2><a href="blog/autocompasion.html">El Poder de la Autocompasión: Cómo Ser Más Amable Contigo Mismo/a</a></h2>
-                            <div>
-                                <time datetime="2024-01-20">20 de enero, 2024</time>
-                                <span>8 min de lectura</span>
+                        <div class="blog-card__content">
+                            <h2 class="blog-card__title"><a href="blog/autocompasion.html">El Poder de la Autocompasión: Cómo Ser Más Amable Contigo Mismo/a</a></h2>
+                            <div class="blog-card__meta">
+                                <time datetime="2024-01-20" class="blog-card__date">20 de enero, 2024</time>
+                                <span class="blog-card__reading-time">8 min de lectura</span>
                             </div>
-                            <p>Aprende a tratarte con la misma amabilidad y comprensión que ofrecerías a un buen amigo en momentos difíciles.</p>
-                            <a href="blog/autocompasion.html">Leer más</a>
+                            <p class="blog-card__excerpt">Aprende a tratarte con la misma amabilidad y comprensión que ofrecerías a un buen amigo en momentos difíciles.</p>
+                            <a href="blog/autocompasion.html" class="blog-card__link">Leer más</a>
                         </div>
                     </article>
                 </div>
                 
-                <!-- MEJORA 12: Paginación -->
-                <nav aria-label="Navegación entre páginas de artículos">
-                    <ul>
-                        <li><a href="#" aria-current="page">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">Siguiente &raquo;</a></li>
+                <!-- Paginación -->
+                <nav class="blog__pagination" aria-label="Navegación entre páginas de artículos">
+                    <ul class="blog__pagination-list">
+                        <li class="blog__pagination-item"><a href="#" class="blog__pagination-link blog__pagination-link--active" aria-current="page">1</a></li>
+                        <li class="blog__pagination-item"><a href="#" class="blog__pagination-link">2</a></li>
+                        <li class="blog__pagination-item"><a href="#" class="blog__pagination-link">3</a></li>
+                        <li class="blog__pagination-item"><a href="#" class="blog__pagination-link">&raquo;</a></li>
                     </ul>
                 </nav>
                 
-                <!-- Sección de YouTube -->
-                <div>
-                    <h2>Visita mi Canal de YouTube</h2>
-                    <p>Contenido gratuito sobre psicología, bienestar emocional y desarrollo personal. Suscríbete para recibir notificaciones cuando publique nuevos videos.</p>
-                    
-                    <!-- MEJORA 13: Contenedor mejorado para responsividad -->
-                    <div>
-                        <!-- IMPORTANTE: Añadido título descriptivo y mejorado atributos de accesibilidad -->
-                        <iframe 
-                            src="https://www.youtube.com/embed/VIDEO_ID" 
-                            title="Introducción a técnicas de mindfulness para el manejo de la ansiedad" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen
-                            loading="lazy">
-                        </iframe>
+                <!-- Sección de YouTube (con Bootstrap) -->
+                <section class="youtube-section py-5 rounded mb-5">
+                <div class="container">
+                    <div class="row justify-content-center">
+                    <div class="col-md-10 text-center">
+                        <h2 class="section-title mb-4">Visita mi Canal de YouTube</h2>
+                        <p class="mb-4">Contenido gratuito sobre psicología, bienestar emocional y desarrollo personal. Suscríbete para recibir notificaciones cuando publique nuevos videos.</p>
+                    </div>
                     </div>
                     
-                    <!-- MEJORA 14: Botón de suscripción -->
-                    <a href="https://www.youtube.com/channel/TU_CANAL" target="_blank" rel="noopener">Suscríbete a mi canal</a>
-                </div>
-                
-                <!-- MEJORA 15: Suscripción al boletín de noticias -->
-                <div>
-                    <h2>Suscríbete a mi boletín</h2>
-                    <p>Recibe artículos, recursos y consejos directamente en tu bandeja de entrada. Solo envío contenido relevante, sin spam.</p>
-                    <form action="#" method="POST">
-                        <div>
-                            <label for="email">Tu correo electrónico</label>
-                            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
-                            <button type="submit">Suscribirme</button>
+                    <div class="row justify-content-center mb-4">
+                    <div class="col-md-10">
+                        <div class="ratio ratio-16x9 shadow rounded">
+                        <iframe src="https://www.youtube.com/embed/yf2JbiH9w6Y" 
+                                title="Introducción a técnicas de mindfulness para el manejo de la ansiedad" 
+                                allowfullscreen>
+                        </iframe>
                         </div>
-                        <div>
-                            <input type="checkbox" id="privacy" name="privacy" required>
-                            <label for="privacy">Acepto la <a href="#">política de privacidad</a></label>
+                    </div>
+                    </div>
+                    
+                    <div class="row justify-content-center">
+                    <div class="col-auto text-center">
+                        <a href="https://www.youtube.com/@psi.sinbarreras" class="btn btn-danger" target="_blank" rel="noopener">
+                        <i class="fab fa-youtube me-2"></i>Suscríbete a mi canal
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                </section>
+                
+                <!-- Suscripción al boletín de noticias -->
+                <section class="newsletter">
+                    <h2 class="newsletter__title">Suscríbete a mi boletín</h2>
+                    <p class="newsletter__text">Recibe artículos, recursos y consejos directamente en tu bandeja de entrada. Solo envío contenido relevante, sin spam.</p>
+                    <form action="#" method="POST" class="newsletter__form">
+                        <div class="newsletter__form-group">
+                            <label for="email" class="newsletter__label">Tu correo electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required class="newsletter__input">
+                            <button type="submit" class="newsletter__button">Suscribirme</button>
+                        </div>
+                        <div class="newsletter__checkbox-group">
+                            <input type="checkbox" id="privacy" name="privacy" required class="newsletter__checkbox">
+                            <label for="privacy" class="newsletter__checkbox-label">Acepto la <a href="#">política de privacidad</a></label>
                         </div>
                     </form>
-                </div>
+                </section>
             </div>
         </section>
     </main>
 
     <!-- ===================== FOOTER ===================== -->
-    <footer>
-        <div>
-            <div>
-                <div>
-                    <h3>Psicología Clínica</h3>
-                    <p>Un espacio seguro para tu bienestar emocional.</p>
+    <footer class="footer">
+        <div class="footer__container"> 
+            <div class="footer__grid">
+                <div class="footer__column footer__brand">
+                    <h3 class="footer__title">Psicología Clínica</h3>
+                    <p class="footer__text">Un espacio seguro para tu bienestar emocional.</p>
                 </div>
                 
-                <div>
-                    <h3>Contacto</h3>
-                    <p><a href="mailto:contacto@psicologia.com">contacto@psicologia.com</a></p>
-                    <p>Teléfono: <a href="tel:+34123456789">+34 123 456 789</a></p>
-                    <address>Dirección: Calle Principal 123, Madrid</address>
+                <div class="footer__column footer__contact">
+                    <h3 class="footer__title">Contacto</h3>
+                    <p><a href="mailto:contacto@psicologia.com" class="footer__link">contacto@psicologia.com</a></p>
+                    <p>Teléfono: <a href="tel:+541123456789" class="footer__link">+54 11 2345 6789</a></p>
+                    <address class="footer__address">Dirección: Av. Libertador 123, Villa Ballester, Buenos Aires</address>
                 </div>
                 
-                <div>
-                    <h3>Sígueme</h3>
-                    <ul>
-                        <li>
-                            <a href="https://www.youtube.com" target="_blank" rel="noopener" title="YouTube">
-                                <img src="../multimedia/youtube-icon.png" alt="YouTube">
+                <div class="footer__column footer__social">
+                    <h3 class="footer__title">Sígueme</h3>
+                    <ul class="footer__social-list">
+                        <li class="footer__social-item">
+                            <a href="https://www.youtube.com" target="_blank" rel="noopener" title="YouTube" class="footer__social-link">
+                                <i class="fab fa-youtube"></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn">
-                                <img src="../multimedia/linkedin-icon.png" alt="LinkedIn">
+                        <li class="footer__social-item">
+                            <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn" class="footer__social-link">
+                                <i class="fab fa-linkedin"></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.instagram.com" target="_blank" rel="noopener" title="Instagram">
-                                <img src="../multimedia/instagram-icon.png" alt="Instagram">
+                        <li class="footer__social-item">
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener" title="Instagram" class="footer__social-link">
+                                <i class="fab fa-instagram"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
             
-            <div>
-                <p>© 2024 [Nombre] - Psicóloga Clínica. Todos los derechos reservados.</p>
+            <div class="footer__copyright">
+                <p>© 2024 Patricia Castro - Psicóloga Clínica. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/script.js"></script>
 </body>
 </html>
