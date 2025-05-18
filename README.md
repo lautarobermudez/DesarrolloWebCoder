@@ -49,8 +49,7 @@ El proyecto está organizado en las siguientes secciones principales:
 2. Abre el archivo `index.html` en tu navegador para visualizar el sitio.
 
 ## Autor
-**Patricia Castro**  
-Psicóloga clínica especializada en bienestar emocional.
+**Lautaro Bermudez**  
 
 ---
 
