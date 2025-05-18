@@ -5,39 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Metadatos SEO para mejorar el posicionamiento en buscadores -->
-    <meta name="description" content="Contacta con [Nombre], psicóloga clínica en Buenos Aires. Agenda tu cita, solicita información o encuentra la ubicación de la consulta.">
+    <meta name="description" content="Contacta con Patricia Castro, psicóloga clínica en Buenos Aires. Agenda tu cita, solicita información o encuentra la ubicación de la consulta.">
     <meta name="keywords" content="contacto psicólogo, cita psicología, psicólogo Buenos Aires, terapia psicológica">
-    <meta name="author" content="[Nombre]">
+    <meta name="author" content="Patricia Castro">
     
-    <title>Psicología Clínica con [Nombre] - Contacto</title>
+    <title>Psicología Clínica con Patricia Castro - Contacto</title>
     
     <!-- Añadir favicon (mismo que en las otras páginas) -->
     <link rel="icon" type="image/png" href="../multimedia/faviconPC.png">
     <link rel="shortcut icon" href="../multimedia/faviconPC.png">
     
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- ICONS - FontAwesome para iconos modernos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
-     <!-- ===================== HEADER ===================== -->
-    <header>
-        <div>
-            <!-- Logo como enlace a la página principal -->
-            <div>
-                <a href="../index.html">
-                    <img src="../multimedia/LogoPCP.png" alt="Psicología Clínica">
+    <!-- ===================== HEADER ===================== -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <!-- Logo como enlace a la página principal -->
+                <a href="../index.html" class="header__logo-link">
+                    <img src="../multimedia/faviconPC.png" alt="Psicología Clínica" class="header__logo-img">
+                    <span class="header__logo-text">Patricia Castro - PSI</span>
                 </a>
             </div>
             
             <!-- Mejora de accesibilidad en la navegación -->
-            <nav role="navigation" aria-label="Menú principal">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="sobre-mi.html">Sobre Mí</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contacto.html" aria-current="page">Contacto</a></li> <!-- Página activa -->
+            <button class="header__toggle" aria-expanded="false" aria-controls="header__menu">☰</button>
+            <nav class="header__nav" role="navigation" aria-label="Menú principal">
+                <ul class="header__menu" id="header__menu">
+                    <li class="header__item"><a href="../index.html" class="header__link">Inicio</a></li>
+                    <li class="header__item"><a href="sobre-mi.html" class="header__link">Sobre Mí</a></li>
+                    <li class="header__item"><a href="servicios.html" class="header__link">Servicios</a></li>
+                    <li class="header__item"><a href="blog.html" class="header__link">Blog</a></li>
+                    <li class="header__item"><a href="contacto.html" class="header__link header__link--active" aria-current="page">Contacto</a></li>
                 </ul>
-                <button aria-expanded="false" aria-controls="menu">☰</button>
             </nav>
         </div>
     </header>
@@ -45,149 +59,192 @@
     <!-- ===================== MAIN CONTENT ===================== -->
     <main>
         <!-- Banner de página con título principal -->
-        <section>
-            <div>
-                <h1>Contacto</h1> <!-- Título principal -->
+        <section class="page-banner">
+            <div class="page-banner__container">
+                <h1 class="page-banner__title">Contacto</h1>
             </div>
         </section>
         
-        <section>
-            <div>
+        <section class="contact">
+            <div class="container">
                 <!-- Texto introductorio -->
-                <div>
+                <div class="contact__intro">
                     <p>Estoy aquí para ayudarte. Puedes contactarme para agendar una cita, solicitar información sobre mis servicios o resolver cualquier duda que tengas. Te responderé a la mayor brevedad posible.</p>
                 </div>
 
-                <!-- Contenedor flexible: Formulario + Mapa -->
-                <div>
-                    <div> <!-- Formulario de contacto -->
-                        <!-- Mejora de formulario con atributos ARIA -->
-                        <form id="contactForm" action="procesar-formulario.php" method="POST" aria-label="Formulario de contacto">
-                            <!-- Mensaje de éxito/error (se mostrarán con CSS cuando implementes JS) -->
-                            <div>¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.</div>
-                            <div>Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.</div>
+                <!-- Contenedor flexible: Formulario + Información de contacto -->
+                <div class="contact__grid">
+                    <!-- Formulario de contacto -->
+                    <div class="contact__form-container">
+                        <div class="form-card">
+                            <h2 class="form-card__title">Formulario de contacto</h2>
+                            <!-- Mensajes de éxito/error (se mostrarán con CSS cuando implementes JS) -->
+                            <div class="form-card__alert form-card__alert--success">¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.</div>
+                            <div class="form-card__alert form-card__alert--error">Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.</div>
 
-                            <fieldset>
-                                <legend>Información de contacto</legend> <!-- LEGEND: Describe el grupo de campos (accesibilidad) -->
+                            <!-- Formulario con clases BEM -->
+                            <form id="contactForm" action="procesar-formulario.php" method="POST" class="contact-form" aria-label="Formulario de contacto">
+                                <fieldset class="contact-form__fieldset">
+                                    <legend class="contact-form__legend">Información de contacto</legend>
 
-                                <!-- Grupo de formulario: Nombre -->
-                                <div>
-                                    <label for="name">Nombre <span>*</span></label>
-                                    <input type="text" id="name" name="name" required aria-required="true">
-                                </div>
-                                
-                                <!-- Grupo de formulario: Email -->
-                                <div>
-                                    <label for="email">Email <span>*</span></label>
-                                    <input type="email" id="email" name="email" required aria-required="true">
-                                </div>
-                                
-                                <!-- Grupo de formulario: Teléfono -->
-                                <div>
-                                    <label for="phone">Teléfono</label>
-                                    <input type="tel" id="phone" name="phone" aria-describedby="phone-help">
-                                    <small id="phone-help">Opcional. Solo se utilizará si es necesario contactarte con urgencia.</small>
-                                </div>
-                                
-                                <!-- Grupo de formulario: Asunto -->
-                                <div>
-                                    <label for="subject">Asunto <span>*</span></label>
-                                    <select id="subject" name="subject" required aria-required="true">
-                                        <option value="">Selecciona una opción</option>
-                                        <option value="informacion">Solicitar información</option>
-                                        <option value="cita">Agendar una cita</option>
-                                        <option value="talleres">Información sobre talleres</option>
-                                        <option value="otro">Otro asunto</option>
-                                    </select>
-                                </div>
-                                
-                                <!-- Elemento de formulario adicional para preferencia horaria -->
-                                <div id="schedule-group">
-                                    <label for="schedule">Preferencia horaria</label>
-                                    <select id="schedule" name="schedule">
-                                        <option value="">Selecciona tu preferencia</option>
-                                        <option value="manana">Mañanas (9:00 - 14:00)</option>
-                                        <option value="tarde">Tardes (16:00 - 20:00)</option>
-                                        <option value="cualquiera">Cualquier horario</option>
-                                    </select>
-                                    <small>Indícanos tu preferencia horaria para la cita</small>
-                                </div>
-                                
-                                <!-- Grupo de formulario: Mensaje -->
-                                <div>
-                                    <label for="message">Mensaje <span>*</span></label>
-                                    <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
-                                </div>
-                                
-                                <!-- Política de privacidad -->
-                                <div>
-                                    <div>
-                                        <input type="checkbox" id="privacy" name="privacy" required aria-required="true">
-                                        <label for="privacy">He leído y acepto la <a href="#">política de privacidad</a> <span>*</span></label>
+                                    <!-- Grupo: Nombre -->
+                                    <div class="contact-form__group">
+                                        <label for="name" class="contact-form__label">Nombre <span class="contact-form__required">*</span></label>
+                                        <input type="text" id="name" name="name" class="contact-form__input" required aria-required="true">
                                     </div>
+                                    
+                                    <!-- Grupo: Email -->
+                                    <div class="contact-form__group">
+                                        <label for="email" class="contact-form__label">Email <span class="contact-form__required">*</span></label>
+                                        <input type="email" id="email" name="email" class="contact-form__input" required aria-required="true">
+                                    </div>
+                                    
+                                    <!-- Grupo: Teléfono -->
+                                    <div class="contact-form__group">
+                                        <label for="phone" class="contact-form__label">Teléfono</label>
+                                        <input type="tel" id="phone" name="phone" class="contact-form__input" aria-describedby="phone-help">
+                                        <small id="phone-help" class="contact-form__help">Opcional. Solo se utilizará si es necesario contactarte con urgencia.</small>
+                                    </div>
+                                    
+                                    <!-- Grupo: Asunto -->
+                                    <div class="contact-form__group">
+                                        <label for="subject" class="contact-form__label">Asunto <span class="contact-form__required">*</span></label>
+                                        <select id="subject" name="subject" class="contact-form__select" required aria-required="true">
+                                            <option value="">Selecciona una opción</option>
+                                            <option value="informacion">Solicitar información</option>
+                                            <option value="cita">Agendar una cita</option>
+                                            <option value="talleres">Información sobre talleres</option>
+                                            <option value="otro">Otro asunto</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <!-- Elemento para preferencia horaria (visible condicionalmente) -->
+                                    <div id="schedule-group" class="contact-form__group">
+                                        <label for="schedule" class="contact-form__label">Preferencia horaria</label>
+                                        <select id="schedule" name="schedule" class="contact-form__select">
+                                            <option value="">Selecciona tu preferencia</option>
+                                            <option value="manana">Mañanas (9:00 - 14:00)</option>
+                                            <option value="tarde">Tardes (16:00 - 20:00)</option>
+                                            <option value="cualquiera">Cualquier horario</option>
+                                        </select>
+                                        <small class="contact-form__help">Indícanos tu preferencia horaria para la cita</small>
+                                    </div>
+                                    
+                                    <!-- Grupo: Mensaje -->
+                                    <div class="contact-form__group">
+                                        <label for="message" class="contact-form__label">Mensaje <span class="contact-form__required">*</span></label>
+                                        <textarea id="message" name="message" rows="5" class="contact-form__textarea" required aria-required="true"></textarea>
+                                    </div>
+                                    
+                                    <!-- Política de privacidad -->
+                                    <div class="contact-form__group">
+                                        <div class="contact-form__checkbox-container">
+                                            <input type="checkbox" id="privacy" name="privacy" class="contact-form__checkbox" required aria-required="true">
+                                            <label for="privacy" class="contact-form__checkbox-label">He leído y acepto la <a href="#">política de privacidad</a> <span class="contact-form__required">*</span></label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                
+                                <!-- Ayuda de campos requeridos -->
+                                <div class="contact-form__required-note">
+                                    <p><span class="contact-form__required">*</span> Campos obligatorios</p>
                                 </div>
-                            </fieldset>
-                            
-                            <!-- Ayuda de campos requeridos -->
-                            <div>
-                                <p><span>*</span> Campos obligatorios</p>
-                            </div>
-                            
-                            <!-- Botón de envío -->
-                            <button type="submit">Enviar Mensaje</button>
-                        </form>
+                                
+                                <!-- Botón de envío -->
+                                <button type="submit" class="contact-form__submit">Enviar Mensaje</button>
+                            </form>
+                        </div>
                     </div>
                     
-                    <!-- Sección de mapa y contacto -->
-                    <div>
-                        <h2>Ubicación</h2>
-                        <address>Calle Principal 123, Madrid</address>
-                        
-                        <!-- Atributos mejorados para el iframe del mapa -->
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12166.05410656416!2d-3.7037902!3d40.4167754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid%2C%20Espa%C3%B1a!5e0!3m2!1ses!2ses!4v1712276658214!5m2!1ses!2ses" 
-                            width="100%" 
-                            height="300" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Ubicación de la consulta en Google Maps">
-                        </iframe>
+                    <!-- Información de contacto y mapa -->
+                    <div class="contact__info-container">
+                        <!-- Mapa -->
+                        <div class="contact-map">
+                            <h2 class="contact-map__title">Ubicación</h2>
+                            <address class="contact-map__address">Av. Libertador 123, Villa Ballester, Buenos Aires</address>
+                            
+                            <!-- Contenedor responsivo para el mapa -->
+                            <div class="contact-map__container">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.034312596337!2d-58.55666132341783!3d-34.47775225483335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca5fb2cb6b8c1%3A0xd75b74aee16e9a79!2sVilla%20Ballester%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1715984265626!5m2!1ses-419!2sar" 
+                                    width="100%" 
+                                    height="300" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Ubicación de la consulta en Google Maps"
+                                    class="contact-map__iframe">
+                                </iframe>
+                            </div>
+                        </div>
                         
                         <!-- Información de contacto adicional -->
-                        <div>
-                            <h2>Información de Contacto</h2>
+                        <div class="contact-details">
+                            <h2 class="contact-details__title">Información de Contacto</h2>
                             <!-- Enlaces mejorados para email y teléfono -->
-                            <p><strong>Email:</strong> <a href="mailto:contacto@psicologia.com">contacto@psicologia.com</a></p>
-                            <p><strong>Teléfono:</strong> <a href="tel:+34123456789">+34 123 456 789</a></p>
-                            <p><strong>Horario:</strong> Lunes a Viernes de 9:00 a 20:00</p>
+                            <ul class="contact-details__list">
+                                <li class="contact-details__item">
+                                    <i class="fas fa-envelope contact-details__icon"></i>
+                                    <span class="contact-details__label">Email:</span>
+                                    <a href="mailto:contacto@psicologia.com" class="contact-details__link">contacto@psicologia.com</a>
+                                </li>
+                                <li class="contact-details__item">
+                                    <i class="fas fa-phone-alt contact-details__icon"></i>
+                                    <span class="contact-details__label">Teléfono:</span>
+                                    <a href="tel:+541123456789" class="contact-details__link">+54 11 2345 6789</a>
+                                </li>
+                                <li class="contact-details__item">
+                                    <i class="fas fa-clock contact-details__icon"></i>
+                                    <span class="contact-details__label">Horario:</span>
+                                    <span class="contact-details__text">Lunes a Viernes de 9:00 a 20:00</span>
+                                </li>
+                            </ul>
                         </div>
-
+                    </div>
+                </div>
                 
                 <!-- FAQ específicas de contacto -->
-                <section>
-                    <h2>Preguntas frecuentes</h2>
+                <section class="faq">
+                    <h2 class="section-title">Preguntas frecuentes</h2>
                     
-                    <div>
-                        <div>
-                            <h3>¿Cuánto tiempo tardarás en responder a mi mensaje?</h3>
-                            <div>
-                                <p>Normalmente respondo a todos los mensajes en un plazo máximo de 24-48 horas laborables. Si el asunto es urgente, te recomiendo contactar directamente por teléfono.</p>
+                    <div class="accordion" id="accordionFAQ">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    ¿Cuánto tiempo tardarás en responder a mi mensaje?
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    <p>Normalmente respondo a todos los mensajes en un plazo máximo de 24-48 horas laborables. Si el asunto es urgente, te recomiendo contactar directamente por teléfono.</p>
+                                </div>
                             </div>
                         </div>
                         
-                        <div>
-                            <h3>¿Puedo solicitar una primera cita informativa?</h3>
-                            <div>
-                                <p>Sí, ofrezco una primera sesión informativa de 15-20 minutos sin compromiso. En esta sesión podremos conocernos, resolver tus dudas y valorar si mi enfoque terapéutico se adapta a tus necesidades.</p>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    ¿Puedo solicitar una primera cita informativa?
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    <p>Sí, ofrezco una primera sesión informativa de 15-20 minutos sin compromiso. En esta sesión podremos conocernos, resolver tus dudas y valorar si mi enfoque terapéutico se adapta a tus necesidades.</p>
+                                </div>
                             </div>
                         </div>
                         
-                        <div>
-                            <h3>¿Trabajas con compañías de seguros?</h3>
-                            <div>
-                                <p>Actualmente trabajo con varias compañías de seguros médicos. Si tienes un seguro, indícalo en el mensaje y te informaré si existe convenio con tu aseguradora.</p>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    ¿Trabajas con compañías de seguros?
+                                </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    <p>Actualmente trabajo con varias compañías de seguros médicos. Si tienes un seguro, indícalo en el mensaje y te informaré si existe convenio con tu aseguradora.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -197,51 +254,51 @@
     </main>
 
     <!-- ===================== FOOTER ===================== -->
-    <footer>
-        <div>
-            <div>
-                <div>
-                    <h3>Psicología Clínica</h3>
-                    <p>Un espacio seguro para tu bienestar emocional.</p>
+    <footer class="footer">
+        <div class="footer__container"> 
+            <div class="footer__grid">
+                <div class="footer__column footer__brand">
+                    <h3 class="footer__title">Psicología Clínica</h3>
+                    <p class="footer__text">Un espacio seguro para tu bienestar emocional.</p>
                 </div>
                 
-                <div>
-                    <h3>Contacto</h3>
-                    <p><a href="mailto:contacto@psicologia.com">contacto@psicologia.com</a></p>
-                    <p>Teléfono: <a href="tel:+34123456789">+34 123 456 789</a></p>
-                    <address>Dirección: Calle Principal 123, Madrid</address>
+                <div class="footer__column footer__contact">
+                    <h3 class="footer__title">Contacto</h3>
+                    <p><a href="mailto:contacto@psicologia.com" class="footer__link">contacto@psicologia.com</a></p>
+                    <p>Teléfono: <a href="tel:+541123456789" class="footer__link">+54 11 2345 6789</a></p>
+                    <address class="footer__address">Dirección: Av. Libertador 123, Villa Ballester, Buenos Aires</address>
                 </div>
                 
-                <div>
-                    <h3>Sígueme</h3>
-                    <ul>
-                        <li>
-                            <a href="https://www.youtube.com" target="_blank" rel="noopener" title="YouTube">
-                                <img src="../multimedia/youtube-icon.png" alt="YouTube">
+                <div class="footer__column footer__social">
+                    <h3 class="footer__title">Sígueme</h3>
+                    <ul class="footer__social-list">
+                        <li class="footer__social-item">
+                            <a href="https://www.youtube.com" target="_blank" rel="noopener" title="YouTube" class="footer__social-link">
+                                <i class="fab fa-youtube"></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn">
-                                <img src="../multimedia/linkedin-icon.png" alt="LinkedIn">
+                        <li class="footer__social-item">
+                            <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn" class="footer__social-link">
+                                <i class="fab fa-linkedin"></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.instagram.com" target="_blank" rel="noopener" title="Instagram">
-                                <img src="../multimedia/instagram-icon.png" alt="Instagram">
+                        <li class="footer__social-item">
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener" title="Instagram" class="footer__social-link">
+                                <i class="fab fa-instagram"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
             
-            <div>
-                <p>© 2024 [Nombre] - Psicóloga Clínica. Todos los derechos reservados.</p>
+            <div class="footer__copyright">
+                <p>© 2024 Patricia Castro - Psicóloga Clínica. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Enlace al archivo JavaScript que se implementará en el futuro -->
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/script.js"></script>
-    <!-- Aquí irá el JavaScript específico para el formulario cuando llegues a esa parte del curso -->
 </body>
 </html>

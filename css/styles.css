@@ -1282,6 +1282,281 @@ img {
     text-decoration: underline;
 }
 
+
+/* ====== PÁGINA CONTACTO ====== */
+
+/* Estilos generales de la página de contacto */
+.contact {
+    padding: 0 1rem 4rem;
+}
+
+.contact__intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/* Grid principal para formulario e información */
+.contact__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+/* Contenedor del formulario */
+.form-card {
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 2rem;
+    transition: var(--transition);
+}
+
+.form-card__title {
+    color: var(--color-primary-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.form-card__title::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+/* Alertas de éxito/error (ocultas por defecto) */
+.form-card__alert {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    display: none;
+}
+
+.form-card__alert--success {
+    background-color: rgba(40, 167, 69, 0.1);
+    border-left: 4px solid #28a745;
+    color: #155724;
+}
+
+.form-card__alert--error {
+    background-color: rgba(220, 53, 69, 0.1);
+    border-left: 4px solid #dc3545;
+    color: #721c24;
+}
+
+/* Formulario de contacto */
+.contact-form {
+    width: 100%;
+}
+
+.contact-form__fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.contact-form__legend {
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid var(--color-gray);
+    padding-bottom: 0.5rem;
+}
+
+.contact-form__group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form__label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.contact-form__required {
+    color: #dc3545;
+    margin-left: 0.2rem;
+}
+
+.contact-form__input,
+.contact-form__select,
+.contact-form__textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    font-family: 'Inter', sans-serif;
+    transition: var(--transition);
+}
+
+.contact-form__input:focus,
+.contact-form__select:focus,
+.contact-form__textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(87, 143, 202, 0.25);
+}
+
+.contact-form__help {
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Checkbox de política de privacidad */
+.contact-form__checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.contact-form__checkbox {
+    margin-top: 0.3rem;
+}
+
+.contact-form__checkbox-label {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.contact-form__checkbox-label a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    transition: var(--transition);
+}
+
+.contact-form__checkbox-label a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* Nota de campos requeridos */
+.contact-form__required-note {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Botón de envío */
+.contact-form__submit {
+    display: inline-block;
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.contact-form__submit:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de mapa */
+.contact-map {
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-map__title {
+    color: var(--color-primary-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-map__address {
+    font-style: normal;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.contact-map__container {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-map__iframe {
+    display: block;
+    width: 100%;
+    border: none;
+}
+
+/* Detalles de contacto */
+.contact-details {
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 2rem;
+}
+
+.contact-details__title {
+    color: var(--color-primary-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-details__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-details__item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+}
+
+.contact-details__icon {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    margin-right: 0.75rem;
+    margin-top: 0.2rem;
+}
+
+.contact-details__label {
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.contact-details__link {
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+.contact-details__link:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+.contact-details__text {
+    color: var(--color-text);
+}
+
+
 /* ====== RESPONSIVE ====== */
 /* Versión escritorio */
 @media (min-width: 768px) {
@@ -1461,5 +1736,34 @@ img {
     
     .newsletter {
         padding: 4rem 3rem;
+    }
+
+    
+    /* ====== PÁGINA CONTACTO ====== */
+    .contact__grid {
+        grid-template-columns: 3fr 2fr;
+        gap: 2.5rem;
+        align-items: start;
+    }
+    
+    /* Eliminar la altura del 100% para evitar estiramiento excesivo */
+    .form-card {
+        height: auto;
+    }
+    
+    /* Estos contenedores no necesitan altura fija */
+    .contact-map,
+    .contact-details {
+        height: auto;
+    }
+    
+    /* Contenedor de info alineado al inicio */
+    .contact__info-container {
+        align-self: start;
+    }
+    
+    .contact-form__submit {
+        width: auto;
+        padding: 0.9rem 2.5rem;
     }
 }
