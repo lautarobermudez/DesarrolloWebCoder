@@ -57,7 +57,10 @@ body {
 }
 
 header { grid-area: header; }
-main { grid-area: main; }
+main { 
+    grid-area: main;
+    padding-top: 60px; 
+}
 footer { grid-area: footer; }
 
 /* Tipografía base */
@@ -90,98 +93,176 @@ img {
 }
 
 /* ====== HEADER Y NAVEGACIÓN ====== */
-.header {
-    background-color: var(--color-secondary);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+/* ====== NAVBAR BOOTSTRAP PERSONALIZADO ====== */
+
+/* Header container */
+header {
+    position: relative;
+    z-index: 1050;
 }
 
-.header__container {
+/* Navbar principal */
+.navbar {
+    background-color: var(--color-secondary) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
+    padding: 0.75rem 0;
+    z-index: 1050;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Efecto hover sutil para toda la navbar */
+.navbar:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Marca/Logo del navbar */
+.navbar-brand {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    max-width: var(--container-width);
-    margin: 0 auto;
-}
-
-.header__logo-link {
-    display: flex;
-    align-items: center;
-}
-
-.header__logo-img {
-    width: 32px;
-    margin-right: 0.75rem;
-}
-
-.header__logo-text {
-    font-size: 1.15rem;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    color: var(--color-primary-dark);
+    color: var(--color-primary-dark) !important;
+    font-size: 1.15rem;
     letter-spacing: 0.5px;
+    text-decoration: none !important;
+    transition: var(--transition);
+    padding: 0.5rem 0;
 }
 
-.header__toggle {
-    background: none;
-    border: none;
-    font-size: 1.25rem;
-    color: var(--color-primary-dark);
-    cursor: pointer;
-    padding: 0.5rem;
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: var(--color-primary) !important;
+    transform: translateY(-1px);
 }
 
-.header__nav {
-    display: none;
-    background-color: var(--color-secondary);
+/* Imagen del logo */
+.navbar-brand img {
+    margin-right: 0.75rem;
+    border-radius: 4px;
+    transition: var(--transition);
 }
 
-.header__nav.open {
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+.navbar-brand:hover img {
+    transform: scale(1.05);
 }
 
-.header__menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+/* Toggle button personalizado */
+.navbar-toggler {
+    border: 1px solid var(--color-primary) !important;
+    border-radius: var(--border-radius);
+    padding: 0.4rem 0.6rem;
+    background-color: transparent;
+    transition: var(--transition);
 }
 
-.header__link {
-    color: var(--color-dark);
+.navbar-toggler:hover {
+    background-color: rgba(87, 143, 202, 0.08);
+    border-color: var(--color-primary-dark) !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(87, 143, 202, 0.25) !important;
+    border-color: var(--color-primary) !important;
+}
+
+/* Icono del toggle personalizado */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2887, 143, 202, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Contenedor del menú colapsable */
+.navbar-collapse {
+    transition: var(--transition);
+}
+
+/* Lista de navegación */
+.navbar-nav {
+    align-items: center;
+}
+
+/* Items de navegación */
+.nav-item {
+    margin: 0 0.25rem;
+}
+
+/* Enlaces de navegación */
+.nav-link {
+    color: var(--color-dark) !important;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 0.95rem;
+    padding: 0.6rem 1rem !important;
+    border-radius: var(--border-radius);
     transition: var(--transition);
     position: relative;
-    padding-bottom: 3px;
+    text-decoration: none !important;
 }
 
-.header__link::after {
+/* Botón CTA "Agendar consulta" */
+.navbar .btn-primary {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: var(--color-secondary) !important;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.3rem;
+    border-radius: 50px !important;
+    transition: var(--transition);
+    box-shadow: 0 2px 8px rgba(87, 143, 202, 0.25);
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.navbar .btn-primary:hover,
+.navbar .btn-primary:focus {
+    background-color: var(--color-primary-dark) !important;
+    border-color: var(--color-primary-dark) !important;
+    color: var(--color-secondary) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(87, 143, 202, 0.35);
+}
+
+.navbar .btn-primary:focus {
+    box-shadow: 0 0 0 0.25rem rgba(87, 143, 202, 0.25), 0 4px 12px rgba(87, 143, 202, 0.35) !important;
+}
+
+.navbar .btn-primary:active {
+    background-color: var(--color-primary-dark) !important;
+    border-color: var(--color-primary-dark) !important;
+    transform: translateY(0);
+}
+
+/* Estados hover y focus de los enlaces */
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--color-primary-dark) !important;
+    background-color: rgba(87, 143, 202, 0.08);
+    transform: translateY(-1px);
+}
+
+/* Enlace activo */
+.nav-link.active {
+    color: var(--color-primary-dark) !important;
+    font-weight: 600;
+}
+
+/* Efecto underline para enlaces activos */
+.nav-link.active::after {
     content: '';
     position: absolute;
-    width: 0;
+    width: 30px;
     height: 2px;
-    bottom: 0;
-    left: 0;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--color-primary);
-    transition: width 0.3s ease;
+    border-radius: 1px;
+    animation: slideIn 0.3s ease-out;
 }
-
-.header__link:hover::after,
-.header__link--active::after { width: 100%; }
-
-.header__link:hover,
-.header__link--active { color: var(--color-primary-dark); }
 
 /* ====== CAROUSEL ====== */
 .carousel {
