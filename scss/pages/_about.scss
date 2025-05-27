@@ -1,0 +1,159 @@
+// ==========================================================================
+// ABOUT PAGE - Exactamente como tienes en tu CSS original
+// ==========================================================================
+
+// Sección Sobre Mí (exactamente como tienes)
+.about {
+    padding: 0 1rem 4rem;
+
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    &__figure {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        transition: $transition;
+        box-shadow: $box-shadow;
+        background-color: transparent;
+        display: inline-block; 
+        border-radius: 50%; 
+        overflow: hidden;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: $card-shadow-hover;
+
+            .about__image {
+                filter: brightness(1.05) saturate(1.1);
+            }
+        }
+    }
+
+    &__image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+        box-shadow: $box-shadow;
+        transition: $transition;
+        display: block;
+    }
+
+    &__caption {
+        margin-top: 0.75rem;
+        font-size: 0.9rem;
+        color: $color-accent;
+        font-style: italic;
+    }
+
+    &__bio {
+        flex: 1;
+    }
+
+    &__text {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+}
+
+// Sección de Formación y Credenciales (exactamente como tienes)
+.education {
+    margin-bottom: 3rem;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: $color-primary-dark;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        background-color: $color-gray;
+        border-radius: $border-radius;
+        padding: 1.5rem;
+        box-shadow: $card-shadow;
+        transition: $transition;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: $card-shadow-hover;
+        }
+    }
+
+    &__year {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.25rem;
+        color: $color-primary;
+        margin-bottom: 0.75rem;
+    }
+
+    &__content {
+        flex: 1;
+    }
+
+    &__degree {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color: $color-primary-dark;
+    }
+
+    &__institution {
+        font-size: 0.95rem;
+        color: $color-text;
+        margin: 0;
+    }
+}
+
+// Sección de Enfoque Terapéutico (exactamente como tienes)
+.approach {
+    margin-bottom: 3rem;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: $color-primary-dark;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    &__item {
+        background-color: $color-secondary;
+        border-radius: $border-radius;
+        box-shadow: $card-shadow;
+        padding: 1.5rem;
+        transition: $transition;
+
+        &:hover {
+            background-color: $color-gray;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+        color: $color-primary-dark;
+    }
+
+    &__text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+}

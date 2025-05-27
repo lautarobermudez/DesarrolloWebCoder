@@ -1,0 +1,111 @@
+// ==========================================================================
+// BLOG PAGE - Exactamente como tienes en tu CSS original
+// ==========================================================================
+
+// Estilos generales del blog (exactamente como tienes)
+.blog {
+    padding: 0 1rem 4rem;
+
+    &__intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 3rem;
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+    }
+
+    // Filtros de categorías
+    &__filters {
+        margin-bottom: 2.5rem;
+
+        &-title {
+            font-size: 1.5rem;
+            color: $color-primary-dark;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        &-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        &-item {
+            margin: 0;
+        }
+
+        &-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: $color-text;
+            background-color: $color-gray;
+            transition: $transition;
+
+            &:hover,
+            &--active {
+                background-color: $color-primary;
+                color: $color-secondary;
+            }
+        }
+    }
+
+    // Grid de artículos del blog
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    // Paginación
+    &__pagination {
+        margin-bottom: 4rem;
+
+        &-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        &-item {
+            margin: 0;
+        }
+
+        &-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $color-gray;
+            color: $color-text;
+            font-weight: 500;
+            transition: $transition;
+
+            &:hover,
+            &--active {
+                background-color: $color-primary;
+                color: $color-secondary;
+            }
+        }
+    }
+}
+
+// Clase personalizada para la sección de YouTube (exactamente como tienes)
+.youtube-section {
+    background-color: $color-gray;
+}

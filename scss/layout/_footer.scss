@@ -1,0 +1,98 @@
+// ==========================================================================
+// FOOTER - Exactamente como tienes en tu CSS original
+// ==========================================================================
+
+.footer {
+    background-color: $color-dark;
+    color: $color-secondary;
+    padding: 3rem 1rem;
+
+    &__container {
+        max-width: $container-width;
+        margin: 0 auto;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        color: $color-secondary;
+        margin-bottom: 1rem;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: $color-primary;
+        }
+    }
+
+    &__logo-img {
+        width: 32px;
+        height: auto;
+        margin-right: 0.75rem;
+        vertical-align: middle;
+    }
+
+    &__text,
+    &__address {
+        margin-bottom: 1rem;
+        font-style: normal;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    &__link {
+        color: $color-secondary;
+        transition: $transition;
+
+        &:hover {
+            color: $color-primary;
+            text-decoration: underline;
+        }
+    }
+
+    &__social-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: $color-text;
+        color: white;
+        border-radius: 50%;
+        transition: $transition;
+        font-size: 1.2rem;
+
+        &:hover {
+            background-color: $color-primary;
+            transform: translateY(-3px);
+            color: white;
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+    }
+}

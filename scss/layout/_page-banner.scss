@@ -1,0 +1,21 @@
+// ==========================================================================
+// ARCHIVO 2: scss/layout/_page-banner.scss
+// ==========================================================================
+.page-banner {
+    background-color: $color-primary;
+    padding: 3rem 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+
+    &__container {
+        max-width: $container-width;
+        margin: 0 auto;
+    }
+
+    &__title {
+        color: $color-secondary;
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}

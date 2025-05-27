@@ -1,0 +1,225 @@
+// ==========================================================================
+// RESPONSIVE - Exactamente como tienes en tu CSS original
+// ==========================================================================
+
+/* Versión escritorio */
+@media (min-width: 768px) {
+    /* Header cambios */
+    .header__toggle {
+        display: none;
+    }
+    
+    .header__nav {
+        display: block;
+    }
+    
+    .header__menu {
+        flex-direction: row;
+        gap: 2rem;
+        margin-top: 0;
+    }
+    
+    /* Carousel cambios */
+    .carousel-item img {
+        height: 70vh;
+    }
+    
+    .carousel-caption {
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .lead {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+    }
+    
+    .carousel-buttons {
+        flex-direction: row !important; 
+
+    }
+    
+    .carousel .btn {
+        width: auto;
+    }
+
+    /* Servicios cambios */
+    .services {
+        padding: 3rem 2rem;
+        
+        &__title {
+            font-size: 2.5rem;
+        }
+        
+        &__grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+    .service-card__image {
+        height: 220px;
+    }
+    
+    /* Quote cambios */
+    .quote {
+        &__text {
+            font-size: 2rem;
+        }
+        
+        &__author {
+            font-size: 1.1rem;
+        }
+    }
+
+    /* Footer cambios */
+    .footer {
+        padding: 5rem 2rem 3rem;
+        
+        &__grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+    }
+
+    /* Banner de página */
+    .page-banner {
+        padding: 3rem 2rem;
+        
+        &__title {
+            font-size: 2.5rem;
+        }
+    }
+    
+    /* Sección Sobre Mí */
+    .about {
+        &__intro {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        
+        &__figure {
+            flex: 0 0 300px;
+        }
+        
+        &__image {
+            max-width: 100%;
+        }
+        
+        &__bio {
+            padding-left: 2rem;
+        }
+    }
+    
+    /* Sección de Formación y Credenciales */
+    .education {
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        
+        &__item {
+            flex-direction: row;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        &__year {
+            flex: 0 0 80px;
+            margin-bottom: 0;
+        }
+    }
+    
+    /* Sección de Enfoque Terapéutico */
+    .approach__container {
+        flex-direction: row;
+        gap: 2rem;
+        
+        .approach__item {
+            flex: 1;
+        }
+    }
+    
+    /* Sección CTA */
+    .cta {
+        padding: 3rem;
+        
+        &__title {
+            font-size: 1.75rem;
+        }
+
+        &__buttons {
+            flex-direction: row;
+            justify-content: center;
+            max-width: 100%;
+        }
+    }
+    
+    /* ====== PÁGINA BLOG ====== */
+    .blog {
+        &__filters-list {
+            gap: 1rem;
+        }
+        
+        &__grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        &__pagination-link {
+            width: 45px;
+            height: 45px;
+        }
+    }
+    
+    .blog-card {
+        &__title {
+            font-size: 1.4rem;
+        }
+        
+        &__image {
+            height: 220px;
+        }
+    }
+    
+    .newsletter {
+        padding: 4rem 3rem;
+        
+        &__form-group {
+            flex-direction: row;
+        }
+
+        &__input {
+            flex: 1;
+        }
+    }
+
+    /* ====== PÁGINA CONTACTO ====== */
+    .contact__grid {
+        grid-template-columns: 3fr 2fr;
+        gap: 2.5rem;
+        align-items: start;
+    }
+    
+    /* Eliminar la altura del 100% para evitar estiramiento excesivo */
+    .form-card {
+        height: auto;
+    }
+    
+    /* Estos contenedores no necesitan altura fija */
+    .contact-map,
+    .contact-details {
+        height: auto;
+    }
+    
+    /* Contenedor de info alineado al inicio */
+    .contact__info-container {
+        align-self: start;
+    }
+    
+    .contact-form__submit {
+        width: auto;
+        padding: 0.9rem 2.5rem;
+    }
+}

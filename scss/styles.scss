@@ -1,0 +1,38 @@
+// ==========================================================================
+// ESTILOS PERSONALIZADOS PARA SITIO WEB DE PATRICIA CASTRO - PSICÓLOGA
+// Refactorizado con SCSS y metodología BEM
+// ==========================================================================
+
+// ABSTRACTS: Variables, mixins, funciones
+// ==========================================================================
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// BASE: Reset, tipografía, elementos base
+// ==========================================================================
+@import 'base/base';
+
+// LAYOUT: Header, footer, layouts principales
+// ==========================================================================
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/page-banner';
+
+// COMPONENTS: Componentes reutilizables
+// ==========================================================================
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/carousel';
+@import 'components/forms';
+
+// PAGES: Estilos específicos de cada página
+// ==========================================================================
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/services';
+@import 'pages/blog';
+@import 'pages/contact';
+
+// RESPONSIVE: Media queries
+// ==========================================================================
+@import 'abstracts/responsive';

@@ -1,0 +1,66 @@
+// ==========================================================================
+// BASE STYLES - Exactamente como tienes en tu CSS original
+// ==========================================================================
+
+// Importación de fuentes (exactamente como tienes)
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600&display=swap');
+
+// ESTILOS BASE (exactamente como tienes)
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header" "main" "footer";
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: $color-text;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+header { 
+    grid-area: header; 
+}
+
+main { 
+    grid-area: main;
+    padding-top: 60px; 
+}
+
+footer { 
+    grid-area: footer; 
+}
+
+// Tipografía base (exactamente como tienes)
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: $color-dark;
+    margin-bottom: 1rem;
+}
+
+p { 
+    margin-bottom: 1.2rem; 
+}
+
+a {
+    text-decoration: none;
+    color: $color-accent;
+    transition: $transition;
+    
+    &:hover { 
+        color: $color-primary; 
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// Utilidades comunes (exactamente como tienes)
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+}
