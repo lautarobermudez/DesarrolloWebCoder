@@ -5,6 +5,7 @@
     background-color: $color-primary;
     padding: 3rem 1rem;
     margin-bottom: 3rem;
+    @include flex-center-column;
     text-align: center;
 
     &__container {

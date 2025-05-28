@@ -24,14 +24,12 @@
         border-radius: 50%; 
         overflow: hidden;
 
-        &:hover {
-            transform: translateY(-5px);
-            box-shadow: $card-shadow-hover;
+        @include hover-lift();
 
-            .about__image {
+        .about__image {
                 filter: brightness(1.05) saturate(1.1);
-            }
         }
+        
     }
 
     &__image {
@@ -86,10 +84,7 @@
         box-shadow: $card-shadow;
         transition: $transition;
 
-        &:hover {
-            transform: translateY(-5px);
-            box-shadow: $card-shadow-hover;
-        }
+        @include hover-lift();
     }
 
     &__year {

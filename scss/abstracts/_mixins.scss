@@ -1,0 +1,94 @@
+// Mixin para hover lift effect
+@mixin hover-lift($translateY: -5px, $shadow: $card-shadow-hover) {
+    transition: $transition;
+    
+    &:hover {
+        transform: translateY($translateY);
+        box-shadow: $shadow;
+    }
+}
+
+// Variantes específicas para diferentes casos
+@mixin hover-lift-light {
+    transition: $transition;
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: $card-shadow;
+    }
+}
+
+@mixin hover-lift-strong {
+    transition: $transition;
+    
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: $card-shadow-hover;
+    }
+}
+
+// ==========================================================================
+// MIXINS - Flex Centering
+// ==========================================================================
+// Mixin básico para centrado flex
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Variante con dirección column
+@mixin flex-center-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+// Variante con gap
+@mixin flex-center-gap($gap: 1rem) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $gap;
+}
+
+// ==========================================================================
+// MIXINS - Button Styles (Base + Variantes)
+// ==========================================================================
+// Mixin BASE - Propiedades comunes a TODOS los botones
+@mixin button-base {
+    border-radius: $border-radius;
+    font-weight: 500;
+    transition: $transition;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+// Mixin FILLED - Botones con fondo de color
+@mixin button-filled($bg-color, $text-color, $hover-bg) {
+    @include button-base;
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    
+    &:hover {
+        background-color: $hover-bg;
+        color: $text-color;
+        transform: translateY(-2px);
+    }
+}
+
+// Mixin OUTLINE - Botones con borde y fondo transparente
+@mixin button-outline($border-color, $text-color, $hover-bg) {
+    @include button-base;
+    background-color: transparent;
+    color: $border-color;
+    border: 1px solid $border-color;
+    
+    &:hover {
+        background-color: $hover-bg;
+        color: $text-color;
+    }
+}

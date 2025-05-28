@@ -23,29 +23,11 @@
     }
 
     &__button {
-        display: inline-block;
+        @include button-filled($color-primary, $color-secondary, $color-primary-dark);
         padding: 0.75rem 1.5rem;
-        background-color: $color-primary;
-        color: $color-secondary;
-        border-radius: $border-radius;
-        font-weight: 500;
-        transition: $transition;
-
-        &:hover {
-            background-color: $color-primary-dark;
-            color: $color-secondary;
-            transform: translateY(-3px);
-        }
 
         &--secondary {
-            background-color: transparent;
-            border: 1px solid $color-primary;
-            color: $color-primary;
-
-            &:hover {
-                background-color: $color-primary;
-                color: $color-secondary;
-            }
+            @include button-outline($color-primary, $color-secondary, $color-primary);
         }
     }
 

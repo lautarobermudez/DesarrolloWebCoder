@@ -42,10 +42,7 @@
         transition: $transition;
         border: none !important;
 
-        &:hover {
-            transform: translateY(-5px);
-            box-shadow: $card-shadow-hover;
-        }
+        @include hover-lift();
     }
 
     .card-body {

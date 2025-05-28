@@ -12,13 +12,11 @@
     box-shadow: $card-shadow;
     transition: $transition;
 
-    &:hover {
-        transform: translateY(-5px);
-        box-shadow: $card-shadow-hover;
+    
+    @include hover-lift(); // Aplica el mixin dentro de &:hover
 
-        .service-card__image img {
-            transform: scale(1.05);
-        }
+    &:hover .service-card__image img {
+        transform: scale(1.05);
     }
 
     &__image {
@@ -55,20 +53,10 @@
     }
 
     &__link {
+        @include button-outline($color-primary, white, $color-primary);
         align-self: flex-start;
         padding: 0.6rem 1.2rem;
-        background-color: transparent;
-        color: $color-primary;
-        border: 1px solid $color-primary;
-        border-radius: $border-radius;
-        font-weight: 500;
         font-size: 0.9rem;
-        transition: $transition;
-
-        &:hover {
-            background-color: $color-primary;
-            color: white;
-        }
     }
 }
 
@@ -82,14 +70,11 @@
     display: flex;
     flex-direction: column;
 
-    &:hover {
-        transform: translateY(-5px);
-        box-shadow: $card-shadow-hover;
+     @include hover-lift();
 
-        .blog-card__image img {
+     &:hover .blog-card__image img {
             transform: scale(1.05);
         }
-    }
 
     &__image {
         position: relative;
@@ -177,19 +162,9 @@
     }
 
     &__link {
+        @include button-outline($color-primary, white, $color-primary);
         align-self: flex-start;
         padding: 0.6rem 1.2rem;
-        background-color: transparent;
-        color: $color-primary;
-        border: 1px solid $color-primary;
-        border-radius: $border-radius;
-        font-weight: 500;
         font-size: 0.9rem;
-        transition: $transition;
-
-        &:hover {
-            background-color: $color-primary;
-            color: white;
-        }
     }
 }

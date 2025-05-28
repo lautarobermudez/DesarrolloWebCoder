@@ -136,37 +136,15 @@ header {
     
     // Botón CTA "Agendar consulta"
     .btn-primary {
-        background-color: $color-primary !important;
-        border-color: $color-primary !important;
-        color: $color-secondary !important;
-        font-family: 'Inter', sans-serif;
-        font-weight: 500;
-        font-size: 0.9rem;
-        padding: 0.6rem 1.3rem;
-        border-radius: 50px !important;
-        transition: $transition;
-        box-shadow: 0 2px 8px rgba(87, 143, 202, 0.25);
-        text-decoration: none !important;
-        border: none !important;
-        outline: none !important;
-        
-        &:hover,
-        &:focus {
-            background-color: $color-primary-dark !important;
-            border-color: $color-primary-dark !important;
-            color: $color-secondary !important;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(87, 143, 202, 0.35);
-        }
-        
-        &:focus {
-            box-shadow: 0 0 0 0.25rem rgba(87, 143, 202, 0.25), 0 4px 12px rgba(87, 143, 202, 0.35) !important;
-        }
-        
-        &:active {
-            background-color: $color-primary-dark !important;
-            border-color: $color-primary-dark !important;
-            transform: translateY(0);
-        }
+    @include button-filled($color-primary, $color-secondary, $color-primary-dark);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.3rem;
+    border-radius: 50px !important;
+    box-shadow: 0 2px 8px rgba(87, 143, 202, 0.25);
+    
+    &:focus {
+        box-shadow: 0 0 0 0.25rem rgba(87, 143, 202, 0.25), 0 4px 12px rgba(87, 143, 202, 0.35) !important;
     }
-}
+   } 
+}  

@@ -48,11 +48,8 @@
     }
 
     .carousel-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex-center-column;
         width: 100%;
-        justify-content: center;
         gap: 1rem;
     }
 
