@@ -10,22 +10,7 @@
 }
 
 .section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2.5rem;
-    color: $color-primary-dark;
-    position: relative;
-
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 40px;
-        height: 2px;
-        background-color: $color-primary;
-    }
+    @extend %section-title-base;
 }
 
 // Sección de Beneficios (exactamente como tienes)
@@ -78,27 +63,11 @@
     margin-bottom: 3rem;
 
     &__container {
-        max-width: $container-width;
-        margin: 0 auto;
+        @extend %container-centered;
     }
 
     &__title {
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 2.5rem;
-        color: $color-primary-dark;
-        position: relative;
-
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 2px;
-            background-color: $color-primary;
-        }
+        @extend %section-title-base;
     }
 
     &__grid {

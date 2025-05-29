@@ -49,16 +49,9 @@
     }
 
     &__input {
+        @extend %form-input-base;
         padding: 0.9rem 1.2rem;
-        border: 1px solid #e0e0e0;
-        border-radius: $border-radius;
         font-size: 1rem;
-
-        &:focus {
-            outline: none;
-            border-color: $color-primary;
-            box-shadow: 0 0 0 3px rgba(87, 143, 202, 0.25);
-        }
     }
 
     &__button {
@@ -127,17 +120,7 @@
     &__input,
     &__select,
     &__textarea {
-        padding: 0.75rem 1rem;
-        border: 1px solid #e0e0e0;
-        border-radius: $border-radius;
-        font-family: 'Inter', sans-serif;
-        transition: $transition;
-
-        &:focus {
-            outline: none;
-            border-color: $color-primary;
-            box-shadow: 0 0 0 3px rgba(87, 143, 202, 0.25);
-        }
+        @extend %form-input-base;
     }
 
     &__help {

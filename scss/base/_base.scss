@@ -61,6 +61,5 @@ img {
 
 // Utilidades comunes (exactamente como tienes)
 .container {
-    max-width: $container-width;
-    margin: 0 auto;
+    @extend %container-centered;
 }

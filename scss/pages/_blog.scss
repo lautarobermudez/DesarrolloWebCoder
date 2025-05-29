@@ -7,9 +7,8 @@
     padding: 0 1rem 4rem;
 
     &__intro {
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto 3rem;
+        @extend %content-centered;
+        margin-bottom: 3rem;
 
         p {
             font-size: 1.1rem;
@@ -22,10 +21,7 @@
         margin-bottom: 2.5rem;
 
         &-title {
-            font-size: 1.5rem;
-            color: $color-primary-dark;
-            margin-bottom: 1rem;
-            text-align: center;
+            @extend %section-title-base;
         }
 
         &-list {

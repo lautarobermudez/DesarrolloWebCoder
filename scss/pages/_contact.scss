@@ -7,9 +7,8 @@
     padding: 0 1rem 4rem;
 
     &__intro {
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto 3rem;
+        @extend %content-centered;
+        margin-bottom: 3rem;
         line-height: 1.7;
         font-size: 1.05rem;
     }
@@ -32,9 +31,7 @@
     margin-bottom: 2rem;
 
     &__title {
-        color: $color-primary-dark;
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
+        @extend %section-title-base;
     }
 
     &__address {
@@ -64,9 +61,7 @@
     padding: 2rem;
 
     &__title {
-        color: $color-primary-dark;
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
+        @extend %section-title-base;
     }
 
     &__list {

@@ -1,5 +1,66 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600&display=swap");
+.contact-details__title, .contact-map__title, .blog__filters-title, .approach__title, .education__title, .services__title, .section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: #3674B5;
+  position: relative;
+}
+.contact-details__title::after, .contact-map__title::after, .blog__filters-title::after, .approach__title::after, .education__title::after, .services__title::after, .section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: #578FCA;
+}
+
+.blog-card, .service-card {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.blog-card:hover, .service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.blog-card__content, .service-card__content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.services__container, .page-banner__container, .footer__container, .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact__intro, .blog__intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-form__input, .contact-form__select, .contact-form__textarea, .newsletter__input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  transition: all 0.3s ease;
+}
+.contact-form__input:focus, .contact-form__select:focus, .contact-form__textarea:focus, .newsletter__input:focus {
+  outline: none;
+  border-color: #578FCA;
+  box-shadow: 0 0 0 3px rgba(87, 143, 202, 0.25);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -49,11 +110,6 @@ a:hover {
 img {
   max-width: 100%;
   height: auto;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 header {
@@ -186,10 +242,6 @@ header {
   color: #FFFFFF;
   padding: 3rem 1rem;
 }
-.footer__container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 .footer__grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -273,10 +325,6 @@ header {
   flex-direction: column;
   text-align: center;
 }
-.page-banner__container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 .page-banner__title {
   color: #FFFFFF;
   margin: 0;
@@ -344,11 +392,6 @@ header {
 .service-card {
   display: flex;
   flex-direction: column;
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .service-card:hover {
@@ -367,12 +410,6 @@ header {
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
-}
-.service-card__content {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
 }
 .service-card__title {
   font-size: 1.25rem;
@@ -406,11 +443,6 @@ header {
 }
 
 .blog-card {
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
@@ -444,12 +476,6 @@ header {
   font-weight: 500;
   border-radius: 50px;
   z-index: 1;
-}
-.blog-card__content {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
 }
 .blog-card__title {
   font-size: 1.3rem;
@@ -662,14 +688,7 @@ header {
 }
 .newsletter__input {
   padding: 0.9rem 1.2rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
   font-size: 1rem;
-}
-.newsletter__input:focus {
-  outline: none;
-  border-color: #578FCA;
-  box-shadow: 0 0 0 3px rgba(87, 143, 202, 0.25);
 }
 .newsletter__button {
   border-radius: 10px;
@@ -738,18 +757,6 @@ header {
 .contact-form__required {
   color: #dc3545;
   margin-left: 0.2rem;
-}
-.contact-form__input, .contact-form__select, .contact-form__textarea {
-  padding: 0.75rem 1rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  font-family: "Inter", sans-serif;
-  transition: all 0.3s ease;
-}
-.contact-form__input:focus, .contact-form__select:focus, .contact-form__textarea:focus {
-  outline: none;
-  border-color: #578FCA;
-  box-shadow: 0 0 0 3px rgba(87, 143, 202, 0.25);
 }
 .contact-form__help {
   margin-top: 0.4rem;
@@ -851,24 +858,6 @@ header {
   margin: 3rem 0;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2.5rem;
-  color: #3674B5;
-  position: relative;
-}
-.section-title::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 2px;
-  background-color: #578FCA;
-}
-
 .benefits {
   background-color: #FFFFFF;
   padding: 4rem 0;
@@ -913,27 +902,6 @@ header {
   background-color: #FFFFFF;
   margin-top: 3rem;
   margin-bottom: 3rem;
-}
-.services__container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.services__title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2.5rem;
-  color: #3674B5;
-  position: relative;
-}
-.services__title::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 2px;
-  background-color: #578FCA;
 }
 .services__grid {
   display: grid;
@@ -1046,11 +1014,6 @@ header {
 .education {
   margin-bottom: 3rem;
 }
-.education__title {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #3674B5;
-}
 .education__grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1093,11 +1056,6 @@ header {
 
 .approach {
   margin-bottom: 3rem;
-}
-.approach__title {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #3674B5;
 }
 .approach__container {
   display: flex;
@@ -1178,9 +1136,7 @@ header {
   padding: 0 1rem 4rem;
 }
 .blog__intro {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 3rem;
+  margin-bottom: 3rem;
 }
 .blog__intro p {
   font-size: 1.1rem;
@@ -1188,12 +1144,6 @@ header {
 }
 .blog__filters {
   margin-bottom: 2.5rem;
-}
-.blog__filters-title {
-  font-size: 1.5rem;
-  color: #3674B5;
-  margin-bottom: 1rem;
-  text-align: center;
 }
 .blog__filters-list {
   list-style: none;
@@ -1265,9 +1215,7 @@ header {
   padding: 0 1rem 4rem;
 }
 .contact__intro {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 3rem;
+  margin-bottom: 3rem;
   line-height: 1.7;
   font-size: 1.05rem;
 }
@@ -1284,11 +1232,6 @@ header {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   padding: 2rem;
   margin-bottom: 2rem;
-}
-.contact-map__title {
-  color: #3674B5;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
 }
 .contact-map__address {
   font-style: normal;
@@ -1311,11 +1254,6 @@ header {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   padding: 2rem;
-}
-.contact-details__title {
-  color: #3674B5;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 .contact-details__list {
   list-style: none;

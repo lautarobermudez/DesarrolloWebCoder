@@ -8,8 +8,7 @@
     padding: 3rem 1rem;
 
     &__container {
-        max-width: $container-width;
-        margin: 0 auto;
+        @extend %container-centered;
     }
 
     &__grid {

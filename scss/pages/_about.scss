@@ -64,9 +64,7 @@
     margin-bottom: 3rem;
 
     &__title {
-        text-align: center;
-        margin-bottom: 2rem;
-        color: $color-primary-dark;
+        @extend %section-title-base
     }
 
     &__grid {
@@ -117,9 +115,7 @@
     margin-bottom: 3rem;
 
     &__title {
-        text-align: center;
-        margin-bottom: 2rem;
-        color: $color-primary-dark;
+        @extend %section-title-base;
     }
 
     &__container {

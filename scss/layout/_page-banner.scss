@@ -9,8 +9,7 @@
     text-align: center;
 
     &__container {
-        max-width: $container-width;
-        margin: 0 auto;
+        @extend %container-centered;
     }
 
     &__title {

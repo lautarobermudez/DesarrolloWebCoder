@@ -4,13 +4,9 @@
 
 // Tarjetas de servicios (exactamente como tienes)
 .service-card {
+    @extend %card-base;
     display: flex;
     flex-direction: column;
-    background-color: $color-secondary;
-    border-radius: $border-radius;
-    overflow: hidden;
-    box-shadow: $card-shadow;
-    transition: $transition;
 
     
     @include hover-lift(); // Aplica el mixin dentro de &:hover
@@ -32,10 +28,7 @@
     }
 
     &__content {
-        padding: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
+        @extend %card-content;
     }
 
     &__title {
@@ -62,11 +55,7 @@
 
 // Tarjetas de blog (exactamente como tienes)
 .blog-card {
-    background-color: $color-secondary;
-    border-radius: $border-radius;
-    overflow: hidden;
-    box-shadow: $card-shadow;
-    transition: $transition;
+    @extend %card-base;
     display: flex;
     flex-direction: column;
 
@@ -103,10 +92,7 @@
     }
 
     &__content {
-        padding: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
+         @extend %card-content;
     }
 
     &__title {
