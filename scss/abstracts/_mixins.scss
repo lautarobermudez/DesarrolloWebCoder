@@ -3,7 +3,7 @@
     transition: $transition;
     
     &:hover {
-        transform: translateY($translateY);
+        transform: translateY($translateY) ;
         box-shadow: $shadow;
     }
 }
