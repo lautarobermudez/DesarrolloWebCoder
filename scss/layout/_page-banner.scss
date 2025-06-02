@@ -2,7 +2,7 @@
 // ARCHIVO 2: scss/layout/_page-banner.scss
 // ==========================================================================
 .page-banner {
-    background-color: $color-primary;
+    background: $gradient-primary;
     padding: 3rem 1rem;
     margin-bottom: 3rem;
     @include flex-center-column;
@@ -12,10 +12,23 @@
         @extend %container-centered;
     }
 
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+        pointer-events: none;
+    }
+
     &__title {
         color: $color-secondary;
         margin: 0;
         font-size: 2rem;
         font-weight: 600;
+        position: relative;
+        z-index: 1;
     }
 }

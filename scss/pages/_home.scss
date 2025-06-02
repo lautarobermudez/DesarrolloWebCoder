@@ -84,7 +84,7 @@
 
 // Sección de Cita/Frase (exactamente como tienes)
 .quote {
-    background-color: $color-primary;
+    background: linear-gradient(135deg, $color-primary-dark 0%, $color-primary 100%);
     color: $color-secondary;
     padding: 4rem 1rem;
     margin: 0;
@@ -107,6 +107,7 @@
             line-height: 0;
             position: absolute;
             color: $color-primary-light;
+            background: radial-gradient(ellipse at center, transparent 0%, rgba($color-primary-dark, 0.3) 100%); // Efecto de profundidad con pseudo-elemento
             opacity: 0.3;
         }
 

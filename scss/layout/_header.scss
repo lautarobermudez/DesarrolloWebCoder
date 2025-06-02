@@ -10,7 +10,7 @@ header {
 
 // Navbar principal (exactamente como tienes, con nesting)
 .navbar {
-    background-color: $color-secondary !important;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FAFBFC 100%) !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
     padding: 0.75rem 0;
     z-index: 1050;

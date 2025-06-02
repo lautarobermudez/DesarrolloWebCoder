@@ -66,6 +66,7 @@
     display: inline-block;
 }
 
+
 // Mixin FILLED - Botones con fondo de color
 @mixin button-filled($bg-color, $text-color, $hover-bg) {
     @include button-base;

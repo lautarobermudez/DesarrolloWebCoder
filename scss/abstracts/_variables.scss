@@ -22,3 +22,12 @@ $card-shadow-hover: 0 12px 20px rgba(0, 0, 0, 0.15);
 
 // CONTENEDORES (exactamente como tienes en :root)
 $container-width: 1200px;
+
+// VARIABLES DE GRADIENTES (basados en tu paleta existente)
+$gradient-primary: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
+$gradient-primary-soft: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+$gradient-hero: linear-gradient(135deg, $color-primary-dark 0%, $color-primary 50%, $color-primary-light 100%);
+$gradient-overlay: linear-gradient(rgba($color-primary-dark, 0.8), rgba($color-primary, 0.6));
+
+// Gradientes sutiles para fondos
+$gradient-section-light: linear-gradient(180deg, $color-secondary 0%, $color-gray 100%);
