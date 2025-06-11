@@ -579,6 +579,12 @@ header {
   color: #FFFFFF;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+.carousel .carousel-caption h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: #FFFFFF;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 .carousel .carousel-caption .lead {
   font-size: 1rem;
   margin-bottom: 1.5rem;
